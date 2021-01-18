@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "type": "item",
+      "title": "Introduction",
+      "uri": "docs/Introduction.md"
+    },
+    {
+      "type": "item",
+      "title": "Getting Started",
+      "uri": "docs/GettingStarted.md"
+    },
+    {
+      "type": "item",
+      "title": "Feature Timeline",
+      "uri": "docs/FeatureTimeline.md"
+    },
+    {
+      "type": "item",
+      "title": "Contributing",
+      "uri": "docs/Contributing.md"
+    },
+    {
+      "type": "item",
+      "title": "FAQ",
+      "uri": "docs/FAQ.md"
+    },
+    {
+      "type": "divider",
+      "title": "Reference"
+    },
+    {
+      "type": "item",
+      "title": "SubscriptionMgt",
+      "uri": "docs/References/SubscriptionMgt.md"
+    },
+    {
+      "type": "item",
+      "title": "Stripe Schema",
+      "uri": "docs/References/StripeSchema.md"
+    },
+    {
+      "type": "item",
+      "title": "Changelog",
+      "uri": "docs/References/Changelog.md"
+    }
+  ]
+}
