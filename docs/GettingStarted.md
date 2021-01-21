@@ -6,7 +6,7 @@ Subscription Management (SM) is a separate extension which you use as a dependen
 <!-- theme: warning -->
 > SM will have full access to your Stripe account data so it's strongly recommended to create separate account just for it.
 
- - Second, [email us](mailto:volodymyr.leonov@theta.co.nz?subject=%5BSM%5D) your *Stripe Account ID* and links to *Terms of conditions* and *Privacy policy* if available. You can retrive your *Stripe Account ID* from your [Stripe account details page](https://dashboard.stripe.com/settings/account).
+ - Second, [email us](mailto:volodymyr.leonov@theta.co.nz?subject=%5BSM%5D) your *Stripe Account ID* and links to *Terms of conditions* and *Privacy policy* if available. You can retrieve your *Stripe Account ID* from your [Stripe account details page](https://dashboard.stripe.com/settings/account).
 ![](../assets/images/StripeAccountID.png)
 
 ## 2. Setup Stripe Product & Price
