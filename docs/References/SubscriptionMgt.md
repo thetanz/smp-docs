@@ -184,7 +184,8 @@ codeunit 50001 UpgradeExt
 <!-- type: tab-end -->
 
 ### IsActive (Method)
-Checks whether product subscription is in one of the active states (active or trialing).
+Checks whether product subscription is in one of the active states (active, trialing, past_due,incomplete, incomplete_expired).
+
 #### IsActive(Text,Text[100])
 ![](https://img.shields.io/badge/version-v1.0.0.0-blue)
 ```sql
