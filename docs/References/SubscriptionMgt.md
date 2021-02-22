@@ -267,6 +267,65 @@ GetPriceName(SecretKey:Text;ProductID:Text[100]):Text
 ```sql
 TBD
 ```
+### GetQuantity (Method)
+Returns the quantity of product.
+#### GetQuantity(Text,Text[100])
+![](https://img.shields.io/badge/version-v1.0.0.0-blue)
+```sql
+[NonDebuggable]
+GetQuantity(SecretKey:Text;ProductID:Text[100]):Integer
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+##### Returns
+| Type | Description |
+| - | - |
+| Integer | Quantity of product |
+##### Examples
+```sql
+pageextension 50000 MyExtension extends "Customer Card"
+{
+    layout
+    {
+        area(content)
+        {
+                field(ProductQuantity; ProductQuantity)
+                {
+                    ApplicationArea = All;
+                    Editable = false;
+                    Caption = 'Product Quantity';
+                    ToolTip = 'Specifies the quantity of product';
+                }
+        }
+    }
+
+    trigger OnAfterGetRecord()
+    begin
+        ProductQuantity := GetQuantity();
+    end;
+
+    [NonDebuggable]
+    procedure GetQuantity(): Integer
+    var
+        SecretProvider: Codeunit "App Key Vault Secret Provider";
+        SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
+        SecretKey: Text;
+        ProductID: Text[100];
+    begin
+        if SecretProvider.TryInitializeFromCurrentApp() then
+            if SecretProvider.GetSecret('SecretKey', SecretKey) and
+               SecretProvider.GetSecret('MyAppProductID', ProductID)
+            then
+                exit(SubscriptionMgt.GetQuantity(SecretKey, ProductID));
+    end;
+
+    var
+      ProductQuantity: Integer;
+}
+```
 ### ShowNotification (Method)
 Force SM to show a notification to user to act on subscription. It will return false if there are nothing to show.
 #### ShowNotification(Text,Text[100])
