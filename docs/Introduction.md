@@ -15,7 +15,7 @@
 ## Design Principles
 - **Security & Privacy**: Subscription Management takes on the responsibility for connecting Business Central end-users with app publishers. With this in mind we do our best to guarantee a fully secure and confidential connection. This is achieved by removing any midle-men from the connection in close collaboration with our [Security Team](https://www.theta.co.nz/solutions/cyber-security/). Part of our security hardening processes is e.g. penetration testing to reduce security vulnerabilities and risks.
 - **Seamless Experience**: We feel a seamless customer journey is key to converting leads into paid users. We aim to deliver an optimal user experience across all application interfaces. This is related to the app follow conventions of UI design , minimalism and simplicity. The API which is simple and well documented. And the overall onboarding experience. 
-- **Publisher's Identification**: Subscription Management is a **publisher's tool** and should not emphasize any  identity other than that of the publisher. This is why we have removed our branding from the UI wherever possible.
+- **Publisher's Identification**: Subscription Management is a **publisher's tool** and should not emphasize any  identity other than that of the publisher. This is why we have removed our own branding from the UI wherever possible.
 
 ## Table of contents
 - [Getting Started](./GettingStarted.md)
