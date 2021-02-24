@@ -323,7 +323,7 @@ pageextension 50000 MyExtension extends "Customer Card"
     end;
 
     var
-      ProductQuantity: Integer;
+      ProductQuantity: BigInteger;
 }
 ```
 ### ShowNotification (Method)
