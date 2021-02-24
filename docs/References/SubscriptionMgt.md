@@ -267,6 +267,260 @@ GetPriceName(SecretKey:Text;ProductID:Text[100]):Text
 ```sql
 TBD
 ```
+### SetQuantity (Method)
+Sets the current quantity for the specified product. Returns `true` if the update process is successful, otherwise returns `false`.
+#### SetQuantity(Text,Text[100],BigInteger)
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+GetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger):Boolean
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| Quantity | BigInteger | Quantity of the product |
+##### Returns
+| Type | Description |
+| - | - |
+| Boolean | `true` if the update process completed with success, otherwise returns `false` |
+##### Examples
+```sql
+page 50000 "My Product Page"
+{
+
+    Caption = 'My Product Page';
+    PageType = List;
+    SourceTable = "My Account Product";
+
+    layout
+    {
+        area(content)
+        {
+            repeater(General)
+            {
+                field(ProductName; ProductName)
+                {
+                    Caption = 'Product Name';
+                    ApplicationArea = All;
+                    Editable = false;
+                }
+                field(ProductUnit; ProductUnit)
+                {
+                    Caption = 'Product Unit';
+                    ApplicationArea = All;
+                    Editable = false;
+                }
+                field(Quantity; Quantity)
+                {
+                    Caption = 'Quantity';
+                    ApplicationArea = All;
+
+                    trigger OnValidate()
+                    begin
+                        if SetQuantity(Quantity) then
+                            Message(MsgTxt_Lbl);
+                    end;
+                }
+            }
+        }
+    }
+
+    [NonDebuggable]
+    procedure SetQuantity(Qty: BigInteger): Boolean
+    var
+        SecretProvider: Codeunit "App Key Vault Secret Provider";
+        SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
+        SecretKey: Text;
+        ProductID: Text[100];
+    begin
+        if SecretProvider.TryInitializeFromCurrentApp() then
+            if SecretProvider.GetSecret('SecretKey', SecretKey) and
+               SecretProvider.GetSecret('MyAppProductID', ProductID)
+            then
+                exit(SubscriptionMgt.SetQuantity(SecretKey, ProductID, Qty));
+    end;
+
+    var
+        Quantity: BigInteger;
+        MsgTxt_Lbl: Label 'Quantity value is succesfully updated'.
+}
+```
+#### SetQuantity(Text,Text[100],BigInteger,Boolean)
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+GetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger;ResetBillingCycle:Boolean):Boolean
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| Quantity | BigInteger | Quantity of the product |
+| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to a next invoice date. |
+##### Returns
+| Type | Description |
+| - | - |
+| Boolean | `true` if the update process completed with success, otherwise returns `false` |
+##### Examples
+```sql
+page 50000 "My Product Page"
+{
+
+    Caption = 'My Product Page';
+    PageType = List;
+    SourceTable = "My Account Product";
+
+    layout
+    {
+        area(content)
+        {
+            repeater(General)
+            {
+                field(ProductName; ProductName)
+                {
+                    Caption = 'Product Name';
+                    ApplicationArea = All;
+                    Editable = false;
+                }
+                field(ProductUnit; ProductUnit)
+                {
+                    Caption = 'Product Unit';
+                    ApplicationArea = All;
+                    Editable = false;
+                }
+                field(ResetBillingCycle; ResetBillingCycle)
+                {
+                    Caption = 'Reset Billing Cycle';
+                    ApplicationArea = All;
+                }
+                field(Quantity; Quantity)
+                {
+                    Caption = 'Quantity';
+                    ApplicationArea = All;
+
+                    trigger OnValidate()
+                    begin
+                        if SetQuantity(Quantity, ResetBillingCycle) then
+                            Message(MsgTxt_Lbl);
+                    end;
+                }
+            }
+        }
+    }
+
+    [NonDebuggable]
+    procedure SetQuantity(Qty: BigInteger; ResetBillingCycle: Boolean): Boolean
+    var
+        SecretProvider: Codeunit "App Key Vault Secret Provider";
+        SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
+        SecretKey: Text;
+        ProductID: Text[100];
+    begin
+        if SecretProvider.TryInitializeFromCurrentApp() then
+            if SecretProvider.GetSecret('SecretKey', SecretKey) and
+               SecretProvider.GetSecret('MyAppProductID', ProductID)
+            then
+                exit(SubscriptionMgt.SetQuantity(SecretKey, ProductID, Qty, ResetBillingCycle));
+    end;
+
+    var
+        Quantity: BigInteger;
+        MsgTxt_Lbl: Label 'Quantity value is succesfully updated.';
+}
+```
+#### SetQuantity(Text,Text[100],BigInteger,Boolean,Boolean)
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+GetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger;ResetBillingCycle:Boolean;ShowConfirmation:Boolean):Boolean
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| Quantity | BigInteger | Quantity of the product |
+| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to a next invoice date. |
+| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with an upcoming invoice information where there will be an information about what next payment will look like and question to proceed. |
+##### Returns
+| Type | Description |
+| - | - |
+| Boolean | `true` if the update process completed with success, otherwise returns `false` |
+##### Examples
+```sql
+page 50000 "My Product Page_SM_TSL"
+{
+
+    Caption = 'My Product Page';
+    PageType = List;
+    SourceTable = "My Account Product";
+
+    layout
+    {
+        area(content)
+        {
+            repeater(General)
+            {
+                field(ProductName; ProductName)
+                {
+                    Caption = 'Product Name';
+                    ApplicationArea = All;
+                    Editable = false;
+                }
+                field(ProductUnit; ProductUnit)
+                {
+                    Caption = 'Product Unit';
+                    ApplicationArea = All;
+                    Editable = false;
+                }
+                field(ResetBillingCycle; ResetBillingCycle)
+                {
+                    Caption = 'Reset Billing Cycle';
+                    ApplicationArea = All;
+                }
+                field(ShowConfirmation; ShowConfirmation)
+                {
+                    Caption = 'Show Confirmation';
+                    ApplicationArea = All;
+                }
+                field(Quantity; Quantity)
+                {
+                    Caption = 'Quantity';
+                    ApplicationArea = All;
+
+                    trigger OnValidate()
+                    begin
+                        if SetQuantity(Quantity, ResetBillingCycle, ShowConfirmation) then
+                            Message(MsgTxt_Lbl);
+                    end;
+                }
+            }
+        }
+    }
+
+    [NonDebuggable]
+    procedure SetQuantity(Qty: BigInteger; ResetBillingCycle: Boolean; ShowConfirmation: Boolean): Boolean
+    var
+        SecretProvider: Codeunit "App Key Vault Secret Provider";
+        SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
+        SecretKey: Text;
+        ProductID: Text[100];
+    begin
+        if SecretProvider.TryInitializeFromCurrentApp() then
+            if SecretProvider.GetSecret('SecretKey', SecretKey) and
+               SecretProvider.GetSecret('MyAppProductID', ProductID)
+            then
+                exit(SubscriptionMgt.SetQuantity(SecretKey, ProductID, Qty, ResetBillingCycle, ShowConfirmation));
+    end;
+
+    var
+        Quantity: BigInteger;
+        MsgTxt_Lbl: Label 'Quantity value is succesfully updated.';
+}
+```
 ### ShowNotification (Method)
 Force SM to show a notification to user to act on subscription. It will return false if there are nothing to show.
 #### ShowNotification(Text,Text[100])
