@@ -268,12 +268,12 @@ GetPriceName(SecretKey:Text;ProductID:Text[100]):Text
 TBD
 ```
 ### GetQuantity (Method)
-Returns the quantity of product.
+Returns the current quantity of the specified product. Default return value is `1` if the quantity could not found.
 #### GetQuantity(Text,Text[100])
-![](https://img.shields.io/badge/version-v1.0.0.0-blue)
+![](https://img.shields.io/badge/version-Unreleased-blue)
 ```sql
 [NonDebuggable]
-GetQuantity(SecretKey:Text;ProductID:Text[100]):Integer
+GetQuantity(SecretKey:Text;ProductID:Text[100]):BigInteger
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -283,7 +283,7 @@ GetQuantity(SecretKey:Text;ProductID:Text[100]):Integer
 ##### Returns
 | Type | Description |
 | - | - |
-| Integer | Quantity of product |
+| BigInteger | Currrent quantity of the product |
 ##### Examples
 ```sql
 pageextension 50000 MyExtension extends "Customer Card"
