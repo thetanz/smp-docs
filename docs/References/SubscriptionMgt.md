@@ -268,13 +268,72 @@ GetPriceName(SecretKey:Text;ProductID:Text[100]):Text
 ```sql
 TBD
 ```
+### GetQuantity (Method)
+Returns the current quantity of the specified product. Default return value is `1` if the quantity could not found.
+#### GetQuantity(Text,Text[100])
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+GetQuantity(SecretKey:Text;ProductID:Text[100]):BigInteger
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+##### Returns
+| Type | Description |
+| - | - |
+| BigInteger | Currrent quantity of the product |
+##### Examples
+```sql
+pageextension 50000 MyExtension extends "Customer Card"
+{
+    layout
+    {
+        area(content)
+        {
+                field(ProductQuantity; ProductQuantity)
+                {
+                    ApplicationArea = All;
+                    Editable = false;
+                    Caption = 'Product Quantity';
+                    ToolTip = 'Specifies the quantity of product';
+                }
+        }
+    }
+
+    trigger OnAfterGetRecord()
+    begin
+        ProductQuantity := GetQuantity();
+    end;
+
+    [NonDebuggable]
+    procedure GetQuantity(): Integer
+    var
+        SecretProvider: Codeunit "App Key Vault Secret Provider";
+        SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
+        SecretKey: Text;
+        ProductID: Text[100];
+    begin
+        if SecretProvider.TryInitializeFromCurrentApp() then
+            if SecretProvider.GetSecret('SecretKey', SecretKey) and
+               SecretProvider.GetSecret('MyAppProductID', ProductID)
+            then
+                exit(SubscriptionMgt.GetQuantity(SecretKey, ProductID));
+    end;
+
+    var
+      ProductQuantity: BigInteger;
+}
+```
 ### SetQuantity (Method)
 Sets the current quantity for the specified product. Returns `true` if the update process is successful, otherwise returns `false`.
 #### SetQuantity(Text,Text[100],BigInteger)
 ![](https://img.shields.io/badge/version-Unreleased-blue)
 ```sql
 [NonDebuggable]
-GetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger):Boolean
+SetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger):Boolean
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -352,7 +411,7 @@ page 50000 "My Product Page"
 ![](https://img.shields.io/badge/version-Unreleased-blue)
 ```sql
 [NonDebuggable]
-GetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger;ResetBillingCycle:Boolean):Boolean
+SetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger;ResetBillingCycle:Boolean):Boolean
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -436,7 +495,7 @@ page 50000 "My Product Page"
 ![](https://img.shields.io/badge/version-Unreleased-blue)
 ```sql
 [NonDebuggable]
-GetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger;ResetBillingCycle:Boolean;ShowConfirmation:Boolean):Boolean
+SetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger;ResetBillingCycle:Boolean;ShowConfirmation:Boolean):Boolean
 ```
 ##### Parameters
 | Name | Type | Description |
