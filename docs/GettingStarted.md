@@ -1,23 +1,34 @@
 # Getting Started
-Subscription Management (SM) is a separate extension which you use as a dependency for each extension you would like to monetise. It uses Stripe as an only beckend. This short manual will guide you through steps required to integrate your app with it.
-## 1. Setup Stripe Account
- - First, [create your Stripe account.](https://dashboard.stripe.com/register) SM use publisher's Stripe account as a backend for all data. Publisher's products as well as future customers and subscriptions will be stored and handled in Stripe.
+This is a simple guide to get started with Subscription Management. Follow all the steps or jump to where you are in the process.
+## 1. Connect your Stripe Account
+<img align="right" src="https://www.belcar.fi/wp-content/uploads/2020/10/Stripe-wordmark-slate_sm-2.png" />
+
+Subscription Management uses your Stripe account as a backend for all data. All your products as well as future customers and subscriptions will be stored and handled in Stripe. 
 
 <!-- theme: warning -->
-> SM will have full access to your Stripe account data so it's strongly recommended to create separate account just for it.
+> Subscription Management will have full access to your Stripe account data so it's strongly recommended to create separate account just for it.
 
- - Second, [email us](mailto:volodymyr.leonov@theta.co.nz?subject=%5BSM%5D) your *Stripe Account ID* and links to *Terms of conditions* and *Privacy policy* if available. You can retrieve your *Stripe Account ID* from your [Stripe account details page](https://dashboard.stripe.com/settings/account).
-![](../assets/images/StripeAccountID.png)
-
+<a href="https://dashboard.stripe.com/oauth/authorize?response_type=code&client_id=ca_IP9AidZcFWmxKgnfQwKQri4paRKxNATO&scope=read_write" style="border-bottom-style:none;padding:10px 90px;background-image:url('https://dabuttonfactory.com/button.png?t=Connect+with+Stripe&f=Open+Sans-Bold&ts=14&tc=fff&hp=23&vp=14&w=180&h=38&c=4&bgt=unicolored&bgc=635bff')"></a>
 ## 2. Setup Stripe Product & Price
-<!-- theme: info -->
 > This process still to be documented. Please contact [Product Team](mailto:volodymyr.leonov@theta.co.nz?subject=%5BSM%5D) for assistance.
-## 3. Setup Dependencies
-<!-- theme: info -->
+## 3. Installing dependencies
+<img align="right" src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuOgEp2yjKd2jA4dDAyxCpujLqDMrKuWEBaqgJYxAB2W12lccbyHoEQJcfG2L0m00" />
+Subscription Management is a separate extension which you use as a dependency for each extension you would like to monetise.
+
+1. [Install Subscription Management](https://share.hsforms.com/1jnXDTuDCR7CCWyzDoGl9jw5n4ae) extension into your development environment.
+2. Add a dependency to your extension's `app.json`.
+```json
+"dependencies": [
+   ...
+   {
+      "id": "6717135a-d80c-4a63-8a3a-5ded6717135a",
+      "publisher": "Theta Systems Limited",
+      "name": "SubscriptionMgt",
+      "version": "1.0.0.0"
+    }
+]
+```
+## 4. Basic Integration
 > This process still to be documented. Please contact [Product Team](mailto:volodymyr.leonov@theta.co.nz?subject=%5BSM%5D) for assistance.
-## 4. "Hello Integration"
-<!-- theme: info -->
-> This process still to be documented. Please contact [Product Team](mailto:volodymyr.leonov@theta.co.nz?subject=%5BSM%5D) for assistance.
-## 5. Try Me
-<!-- theme: info -->
-> This process still to be documented. Please contact [Product Team](mailto:volodymyr.leonov@theta.co.nz?subject=%5BSM%5D) for assistance.
+
+**Continue to ["SubscriptionMgt_SM_TSL Reference"](References/SubscriptionMgt.md)**

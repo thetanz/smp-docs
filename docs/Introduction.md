@@ -22,6 +22,8 @@
 - [Feature Timeline](./FeatureTimeline.md)
 - [Contributing](./Contributing.md)
 - [FAQ](./FAQ.md)
+- Manual
+  - [Mocking]()
 - Reference
   - [SubscriptionMgt](./References/SubscriptionMgt.md)
   - [Stripe Schema](./References/StripeSchema.md)

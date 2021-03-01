@@ -326,7 +326,6 @@ pageextension 50000 MyExtension extends "Customer Card"
       ProductQuantity: BigInteger;
 }
 ```
-
 ### SetQuantity (Method)
 Sets the current quantity for the specified product. Returns `true` if the update process is successful, otherwise returns `false`.
 #### SetQuantity(Text,Text[100],BigInteger)
@@ -433,7 +432,6 @@ page 50000 "My Product Page"
     PageType = List;
     SourceTable = "My Account Product";
 
->>>>>>> master
     layout
     {
         area(content)
