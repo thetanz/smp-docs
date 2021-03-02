@@ -9,12 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - SubscriptionMgt: SetQuantity
 - SubscriptionMgt: GetQuantity
 - Payment Screen: Total Amount to Pay
-- Handle Pastdue, Incomplete, Incomplete_Expired, Unpaid, Canceled
-- Control Limits per Customer
+- Subscription States: Pastdue, Incomplete, Incomplete_Expired, Unpaid, Canceled
+- Environments\Tenant Limit: per customer
+### Changed
+- Notifications Action: "Skip for today" to "Remind me later"
 ### Fixed
 - Version 17 Assisted Setup layout
-- More informative Signout Message
-- Prorated upcomming payment data fixed + formats 
+- Assisted Setup signout message
+- Prorated upcoming payment data & formats 
+- Upcoming invoice data cache
 ## [1.0.5.0] `(2021-01-13)`
 ### Added
 - Support all [Stripe TaxID types](https://stripe.com/docs/billing/customer/tax-ids#supported-tax-id)

@@ -41,6 +41,11 @@
     },
     {
       "type": "item",
+      "title": "Stripe Lifecycles",
+      "uri": "docs/References/StripeLifecycles.md"
+    },
+    {
+      "type": "item",
       "title": "Changelog",
       "uri": "docs/References/Changelog.md"
     }

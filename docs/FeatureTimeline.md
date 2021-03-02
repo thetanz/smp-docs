@@ -4,24 +4,22 @@ This feature list is a peek into our roadmap. It identifies some of the signific
 
 Timeframe| Feature | Area
 ---------|----------|---------
- 2020 Q4 | **Tax Identifiers**: taxation within subscriptions | Billing
- 2020 Q4 | **Contact Us**: seamless support channel | Support
- 2021 Q1 | **Quantity API**: measured pricings | Billing
  2021 Q1 | **Usage API**: usage based pricings | Billing
  2021 Q1 | **V14 Support**: downgrade to v14 | Integration
  2021 Q1 | **Tracing**: APM | Integration
- 2021 Q1 | **Subscription Lifecycle**: handle all subscription states | Integration
  2021 Q1 | **Multi-Production Tenant**: multiple production environments | Account
  2021 Q1 | **Price per Environment**: per environment pricings | Billing
- 2021 Q2 | **Stripe Connect**: self-service onboarding | Onboarding
- 2021 Q2 | **Sales Through Partners**: sales with implementation partner | Billing
  2021 Q2 | **Account Access Group**: limit access within tenant | Account
  2021 Q2 | **Pricing Cards**: improved pricing presentation | UI
+ 2021 Q3 | **Sales Through Partners**: sales with implementation partner | Billing
 ## Current features
 The features timeline lists significant features delivered. You can also view the build numbers for each version.
 
 Version | Feature | Area
 ---------|----------|---------
+ [unreleased](./References/Changelog.md##unreleased) | **Stripe Connect**: self-service onboarding | Onboarding
+ [unreleased](./References/Changelog.md##unreleased) | **Quantity API**: measured pricings | Billing
+ [unreleased](./References/Changelog.md##unreleased) | **Subscription Lifecycle**: handle all subscription states | Integration
  [1.0.5.0](./References/Changelog.md#1050-2021-01-13) | **Tax Identifiers**: taxation within subscriptions | Billing
  [1.0.5.0](./References/Changelog.md#1050-2021-01-13) | **Contact Us**: seamless support channel | Support
  [1.0.4.0](./References/Changelog.md#1040-2020-12-13) | **Upgrade to API version 2020-08-27**: new Stripe API version | Integration
