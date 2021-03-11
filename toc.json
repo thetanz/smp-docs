@@ -27,6 +27,15 @@
     },
     {
       "type": "divider",
+      "title": "Overview"
+    },
+    {
+      "type": "item",
+      "title": "Security & Privacy",
+      "uri": "docs/Overview/Security&Privacy.md"
+    },
+    {
+      "type": "divider",
       "title": "Reference"
     },
     {

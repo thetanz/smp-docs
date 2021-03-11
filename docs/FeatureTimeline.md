@@ -4,13 +4,12 @@ This feature list is a peek into our roadmap. It identifies some of the signific
 
 Timeframe| Feature | Area
 ---------|----------|---------
- 2021 Q1 | **Usage API**: usage based pricings | Billing
- 2021 Q1 | **V14 Support**: downgrade to v14 | Integration
- 2021 Q1 | **Tracing**: APM | Integration
- 2021 Q1 | **Multi-Production Tenant**: multiple production environments | Account
- 2021 Q1 | **Price per Environment**: per environment pricings | Billing
- 2021 Q2 | **Account Access Group**: limit access within tenant | Account
  2021 Q2 | **Pricing Cards**: improved pricing presentation | UI
+ 2021 Q2 | **Multi-Production Tenant**: multiple production environments | Account
+ 2021 Q2 | **Price per Environment**: per environment pricings | Billing
+ 2021 Q2 | **Account Access Group**: limit access within tenant | Account
+ 2021 Q3 | **Tracing**: APM | Integration
+ 2021 Q3 | **Usage API**: usage based pricings | Billing
  2021 Q3 | **Sales Through Partners**: sales with implementation partner | Billing
 ## Current features
 The features timeline lists significant features delivered. You can also view the build numbers for each version.

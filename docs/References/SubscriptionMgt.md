@@ -1,5 +1,17 @@
 # SubscriptionMgt_SM_TSL (Codeunit)
 SubscriptionMgt_SM_TSL codeunit contains all the code blocks for the integration aspect of Subscription Management product. It comprises of multiple functions as described below. 
+Before progressing, please ensure that Subscription Management extensions installed into your development environment and right dependency defined in your extension's `app.json`: 
+```json
+"dependencies": [
+   ...
+   {
+      "id": "6717135a-d80c-4a63-8a3a-5ded6717135a",
+      "publisher": "Theta Systems Limited",
+      "name": "SubscriptionMgt",
+      "version": "1.0.0.0"
+    }
+]
+```
 ## Common Parameters
 | Name | Type | Description |
 | - | - | - |
