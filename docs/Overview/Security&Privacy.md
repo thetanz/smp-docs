@@ -13,7 +13,7 @@ Currently we are using your [Stripe Secret Key](https://stripe.com/docs/keys#saf
 Subscription Management (SM) collects and stores information from you and your customer. We classify this information into categories listed bellow and depends on each of this categories we applying a different storage and usage requirements:
 
 Category | Description | Entered | Stored | Used 
----------|------------|--------|-----
+-------- | ----------- | ------- | ------ | ----
 **Publisher's Authentication Information** | Publisher's Stripe API Keys | By publisher using Subscription Mgt. API | Strongly encrypted within Subscription Mgt. | By Subscription Mgt. to authorize your app with your Stripe account
 **Publisher's Information** | Publisher's Stripe ID, name, support email, Stripe TAX ID, links to TOC and privacy policy | By publisher using Stripe UI | Public within Subscription Mgt. | By Subscription Mgt. to operate
 **Customer's User Authentication Information** | Customer's user SIDs | By user using Subscription Mgt. Assisted Setup | Public within Subscription Mgt. | By Subscription Mgt. to authorize customer access to customer's account information
