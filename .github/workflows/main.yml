@@ -6,6 +6,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: Preview
+      url: https://docs.365extensions.com/docs/smp-preview
     steps:
       - uses: actions/checkout@v2
       - name: Install Stoplight CLI
