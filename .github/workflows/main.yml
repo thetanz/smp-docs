@@ -1,0 +1,18 @@
+name: CD
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Stoplight CLI
+        run: npm install -g @stoplight/cli
+      - name: Deploy to Stoplight
+        env:
+          STOPLIGHT_TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
+        run: |
+          cd $GITHUB_WORKSPACE,
+          npx @stoplight/cli@5 push --ci-token $STOPLIGHT_TOKEN
