@@ -4,7 +4,7 @@ Subscription management uses Stripe to manage different plans and payments proce
 ### Name
 Customer gets to see this name as publisher name throughout BC. Preferably Name should be similar to your AppSource publisher name.
 #### Setup in Stripe UI
-1. Go to [Stripe account detailes](https://dashboard.stripe.com/settings/account)
+1. Go to [Stripe account details](https://dashboard.stripe.com/settings/account)
 2. Fill-in Account name under account settings section and save.
 ![](../../assets/images/StripeSchema_AccountName.png)
 #### Where used in SM

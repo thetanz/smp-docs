@@ -28,7 +28,7 @@ Version | Feature | Area
  1.0.3.0 | **Trial Periods**: handles trialing | Billing
  1.0.2.0 | **Mocking API**: enable test automation | Integration
  1.0.2.0 | **Single Sign On (SSO)**: offloads identify to Azure AD | Account
- 1.0.1.0 | **3D Validaiton**: 3D & 3D v2 card validations | Payment
+ 1.0.1.0 | **3D Validation**: 3D & 3D v2 card validations | Payment
  1.0.1.0 | **Notifications**: follow user though | UI
  1.0.1.0 | **Platforms**: work securely in SaaS and On-Prem | Integration
  1.0.1.0 | **Encryption**: publisher’s server-side encryption | Integration
@@ -38,7 +38,7 @@ Version | Feature | Area
  1.0.0.0 | **Subscription**: create and update subscription with proration | Billing
  1.0.0.0 | **Pay with Card**: collect card data securely | Payment
  1.0.0.0 | **Assisted Setup**: seamless sign-up process | UI
- 1.0.0.0 | **Initialization API**: safely initialisation | Integration
+ 1.0.0.0 | **Initialization API**: safely initialization | Integration
  1.0.0.0 | **Lifecycle API**: feedback to publisher's app | Integration
 
 

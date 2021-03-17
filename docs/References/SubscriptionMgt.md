@@ -15,15 +15,15 @@ Before progressing, please ensure that Subscription Management extensions instal
 ## Common Parameters
 | Name | Type | Description |
 | - | - | - |
-| SecretKey | Text | It's your [Stripe Secret Key](https://stripe.com/docs/keys#obtain-api-keys) which allows any API request to your Stripe account without restriction. It **should be kept confidential** preferably in [secure vault](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault-overview). |
-| PublishableKey | Text | It's your [Stripe Publishable Key](https://stripe.com/docs/keys#obtain-api-keys) which allows identify your Stripe account when using Stripe.js controls. They aren't secret and can safely published in code. |
-| ProductID | Text\[100\] | It's [Stripe product](https://dashboard.stripe.com/products) identifier of the product that assosiated with your extension. |
+| SecretKey | Text | Your [Stripe API Secret](https://stripe.com/docs/keys#obtain-api-keys)<br> :warning: This key can perform any API request to Stripe without restriction, we highly recommend you leverage a [secure vault](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault-overview) to safeguard the integrity of your account. |
+| PublishableKey | Text | Your [Stripe Publishable Key](https://stripe.com/docs/keys#obtain-api-keys)<br> This key exists solely to identify your account with Stripe and can be considered a public identified that can safely remain in source. |
+| ProductID | Text\[100\] | Your [Stripe Product Identifier](https://dashboard.stripe.com/products)<br> The identifier of the product associated with your extension. |
 <!-- theme: info -->
-> _SecretKey_, _PublishableKey_ and _ProductID_ parameter values is differ whereware you using Stripe in test or live mode. Use test values during development/testing and make sure you use live one in production ready package. Easiest way to do it is by replacing [keyVaultUrls](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault#specify-the-azure-key-vault-in-extensions) during your continuous integration process.
+> _SecretKey_, _PublishableKey_ and _ProductID_ values differ across your Stripe account between your test and live modes. Use test values during development/testing and make sure you use your live key in your production ready package.The easiest way to do this is by replacing the [keyVaultUrls](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault#specify-the-azure-key-vault-in-extensions) values within your continuous integration process.
 
 ## Integration API
 ### TryAddProduct (Method)
-Requests SM to start handling your extension. It's recomended to call it with `OnInstallAppPerDatabase` and `OnUpgradePerDatabase` events.
+Requests SM to start handling your extension. It's recommended to call it with `OnInstallAppPerDatabase` and `OnUpgradePerDatabase` events.
 #### TryAddProduct(Text,Text,ModuleInfo,Text[100])
 ![](https://img.shields.io/badge/version-v1.0.0.0-blue)
 ```sql
@@ -753,7 +753,7 @@ codeunit 50002 "MyExtensionTest"
         SubscriptionMgt.SetMock(false, true, 'Business');
         // [When] user opens a customer card 
         ...
-        // [Then] castomer card page is editable
+        // [Then] customer card page is editable
         ...
     end;
 }
