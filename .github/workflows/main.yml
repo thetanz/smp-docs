@@ -14,5 +14,5 @@ jobs:
         env:
           STOPLIGHT_TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
         run: |
-          cd $GITHUB_WORKSPACE,
+          cd $GITHUB_WORKSPACE
           npx @stoplight/cli@5 push --ci-token $STOPLIGHT_TOKEN
