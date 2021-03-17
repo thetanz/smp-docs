@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install Stoplight CLI
-        run: npm install -g @stoplight/cli
+        run: npm install @stoplight/cli
       - name: Deploy to Stoplight
         env:
           STOPLIGHT_TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
