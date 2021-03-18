@@ -416,7 +416,7 @@ page 50000 "My Product Page"
 
     var
         Quantity: BigInteger;
-        MsgTxt_Lbl: Label 'Quantity value is succesfully updated'.
+        MsgTxt_Lbl: Label 'Quantity value is successfully updated'.
 }
 ```
 #### SetQuantity(Text,Text[100],BigInteger,Boolean)
@@ -500,7 +500,7 @@ page 50000 "My Product Page"
 
     var
         Quantity: BigInteger;
-        MsgTxt_Lbl: Label 'Quantity value is succesfully updated.';
+        MsgTxt_Lbl: Label 'Quantity value is successfully updated.';
 }
 ```
 #### SetQuantity(Text,Text[100],BigInteger,Boolean,Boolean)
@@ -664,7 +664,7 @@ codeunit 50002 "MyExtensionTest"
         SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
         MockAuthKey: Text;
     begin
-        // [Scenario] Check if customer card is editbale when subscription is active
+        // [Scenario] Check if customer card is editable when subscription is active
         // [Given] my extension is installed and subscription is active
         SecretProvider.TryInitializeFromCurrentApp();
         SecretProvider.GetSecret('MockAuthKey', MockAuthKey);
@@ -672,7 +672,7 @@ codeunit 50002 "MyExtensionTest"
         SubscriptionMgt.SetMock(false, true, 'Business');
         // [When] user opens a customer card 
         ...
-        // [Then] castomer card page is editable
+        // [Then] customer card page is editable
         ...
     end;
 }
@@ -745,7 +745,7 @@ codeunit 50002 "MyExtensionTest"
         SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
         MockAuthKey: Text;
     begin
-        // [Scenario] Check if customer card is editbale when subscription is active
+        // [Scenario] Check if customer card is editable when subscription is active
         // [Given] my extension is installed and subscription is active
         SecretProvider.TryInitializeFromCurrentApp();
         SecretProvider.GetSecret('MockAuthKey', MockAuthKey);
