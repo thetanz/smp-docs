@@ -1,0 +1,20 @@
+name: Preview (Continues Deployment)
+on:
+  push:
+    branches: [ master ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: Preview
+      url: https://docs.365extensions.com/docs/smp-preview
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Stoplight CLI
+        run: sudo npm install -g @stoplight/cli
+      - name: Deploy to Stoplight
+        env:
+          STOPLIGHT_TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
+        run: |
+          cd $GITHUB_WORKSPACE
+          npx @stoplight/cli@5 push --ci-token $STOPLIGHT_TOKEN

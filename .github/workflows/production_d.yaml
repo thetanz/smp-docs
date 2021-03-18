@@ -1,14 +1,12 @@
-name: CD
+name: Production (Deployment)
 on:
-  push:
-    branches: [ master ]
   workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
-      name: Preview
-      url: https://docs.365extensions.com/docs/smp-preview
+      name: Production
+      url: https://docs.365extensions.com/docs/smp
     steps:
       - uses: actions/checkout@v2
       - name: Install Stoplight CLI
