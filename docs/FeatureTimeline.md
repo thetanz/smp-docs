@@ -25,7 +25,7 @@ Version | Feature | Area
  1.0.3.0 | **Multi-Publisher**: multiple publishers within same environment | Account
  1.0.3.0 | **Translations**: English, Dutch, French and German | UI
  1.0.3.0 | **Offline**: Operates during network outages | Integration
- 1.0.3.0 | **Trial Periods**: handles trialing | Billing
+ 1.0.3.0 | **Trial Periods**: handles trialling | Billing
  1.0.2.0 | **Mocking API**: enable test automation | Integration
  1.0.2.0 | **Single Sign On (SSO)**: offloads identify to Azure AD | Account
  1.0.1.0 | **3D Validation**: 3D & 3D v2 card validations | Payment
