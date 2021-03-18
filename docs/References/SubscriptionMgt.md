@@ -19,7 +19,7 @@ Before progressing, please ensure that Subscription Management extensions instal
 | PublishableKey | Text | Your [Stripe Publishable Key](https://stripe.com/docs/keys#obtain-api-keys)<br> This key exists solely to identify your account with Stripe and can be considered a public identified that can safely remain in source. |
 | ProductID | Text\[100\] | Your [Stripe Product Identifier](https://dashboard.stripe.com/products)<br> The identifier of the product associated with your extension. |
 <!-- theme: info -->
-> _SecretKey_, _PublishableKey_ and _ProductID_ values differ across your Stripe account between your test and live modes. Use test values during development/testing and make sure you use your live key in your production ready package.The easiest way to do this is by replacing the [keyVaultUrls](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault#specify-the-azure-key-vault-in-extensions) values within your continuous integration process.
+> _SecretKey_, _PublishableKey_ and _ProductID_ values differ across your Stripe account between your test and live modes. Use test values during development/testing and make sure you use your live key in your production ready package. The easiest way to do this is by replacing the [keyVaultUrls](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault#specify-the-azure-key-vault-in-extensions) values within your continuous integration process.
 
 ## Integration API
 ### TryAddProduct (Method)
