@@ -1,6 +1,6 @@
 # Feature Timeline
 ## Features under development
-This feature list is a peek into our roadmap. It identifies some of the significant features we are currently working on and a rough timeframe for when you can expect to see them. It is not comprehensive but is intended to provide some visibility into key investments. These features and dates are the current plans at this time and are subject to change.
+This feature list is a peek into our roadmap. It identifies some of the significant features we are currently working on and a rough timeframe for when you can expect to see them. It is not comprehensive but is intended to provide some visibility into key investments. These features and dates are the current plans currently and are subject to change.
 
 Timeframe| Feature | Area
 ---------|----------|---------
@@ -9,7 +9,7 @@ Timeframe| Feature | Area
  2021 Q2 | **Price per Environment**: per environment pricings | Billing
  2021 Q2 | **Account Access Group**: limit access within tenant | Account
  2021 Q3 | **Tracing**: APM | Integration
- 2021 Q3 | **Usage API**: usage based pricings | Billing
+ 2021 Q3 | **Usage API**: usage-based pricings | Billing
  2021 Q3 | **Sales Through Partners**: sales with implementation partner | Billing
 ## Current features
 The features timeline lists significant features delivered. You can also view the build numbers for each version.
@@ -25,7 +25,7 @@ Version | Feature | Area
  1.0.3.0 | **Multi-Publisher**: multiple publishers within same environment | Account
  1.0.3.0 | **Translations**: English, Dutch, French and German | UI
  1.0.3.0 | **Offline**: Operates during network outages | Integration
- 1.0.3.0 | **Trial Periods**: handles trialing | Billing
+ 1.0.3.0 | **Trial Periods**: handles trialling | Billing
  1.0.2.0 | **Mocking API**: enable test automation | Integration
  1.0.2.0 | **Single Sign On (SSO)**: offloads identify to Azure AD | Account
  1.0.1.0 | **3D Validation**: 3D & 3D v2 card validations | Payment

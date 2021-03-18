@@ -1,12 +1,12 @@
 # Security & Privacy
-Subscription Management takes on the responsibility of connecting your application with your end-users. With this in mind, we've taken a number of steps to ensure the confidentiality of your data whilst it's entrusted with us.
+Subscription Management takes on the responsibility of connecting your application with your end-users. We've taken a number of steps to ensure the confidentiality of your data whilst it's entrusted with us.
 
 We work in close collaboration with our [Security Team](https://theta.co.nz/cyber) to ensure our design and architecture meets and exceeds industry standards, with regular penetration tests validating our controls.
 
 ## Keeping your Stripe account safe
 We use your [Stripe Secret Key](https://stripe.com/docs/keys#safe-keys) to authenticate to your Stripe Account and leverage this connection to facilitate  operations performed within Subscription Management.
 
-This key provides full access to your Stripe account and can broker access to your customer data as well as any billing transactions. For these reasons, we reccomend you follow the below safeguards:
+This key provides full access to your Stripe account and can broker access to your customer data as well as any billing transactions. For these reasons, we recommend you follow the below safeguards:
 1. Keep your Stripe Secret Key in a robust location such as [Azure's Key Vault](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault)) 
 2. Mark any methods that work with secrets as [NonDebuggable](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/methods/devenv-nondebuggable-attribute)
 3. Mark any object instances that works with secrets as accessible only within the application. Single instance codeunits may be used only if its **methods** are marked with [internal access modifier](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-using-access-modifiers) - the `internalsVisibleTo` setting declared within the applications JSON File should be blank to disallow **ANY** apps from accessing it.
