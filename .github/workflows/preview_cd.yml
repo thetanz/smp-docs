@@ -1,4 +1,4 @@
-name: Preview (CD)
+name: Preview (Continues Deployment)
 on:
   push:
     branches: [ master ]
