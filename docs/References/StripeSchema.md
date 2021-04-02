@@ -111,5 +111,5 @@ If a tax rate exists for the customer's region then he must provide his "Tax Reg
 ![](../../assets/images/StripeSchema_TaxRate_SM.png)
 
 ## See Also
-- [SubscriptionMgt_SM_TSL Reference](References/SubscriptionMgt.md)
-- [Stripe Lifecycles](References/StripeLifecycles.md)
+- [SubscriptionMgt_SM_TSL Reference](SubscriptionMgt.md)
+- [Stripe Lifecycles](StripeLifecycles.md)

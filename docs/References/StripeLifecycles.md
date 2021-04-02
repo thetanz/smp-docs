@@ -12,5 +12,5 @@ cancelled | The subscription has been cancelled. During cancellation  automatic 
 unpaid | The latest invoice hasn’t been paid but the subscription remains in place. The latest invoice remains open and invoices continue to be generated but payments aren’t attempted. | | | 
 
 ## See Also
-- [SubscriptionMgt_SM_TSL Reference](References/SubscriptionMgt.md)
-- [Stripe Schema](References/StripeSchema.md)
+- [SubscriptionMgt_SM_TSL Reference](SubscriptionMgt.md)
+- [Stripe Schema](StripeSchema.md)

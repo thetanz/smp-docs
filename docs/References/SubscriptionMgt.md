@@ -760,6 +760,6 @@ codeunit 50002 "MyExtensionTest"
 ```
 
 ## See Also
-- [Stripe Schema](References/StripeSchema.md)
-- [Stripe Lifecycles](References/StripeLifecycles.md)
-- [Security & Privacy](Overview/Security&Privacy.md)
+- [Stripe Schema](StripeSchema.md)
+- [Stripe Lifecycles](StripeLifecycles.md)
+- [Security & Privacy](../Overview/Security&Privacy.md)

@@ -29,5 +29,5 @@ Category | Description | Entered | Stored | Used
 Please check a complete [Terms and Conditions](https://www.theta.co.nz/media/3805/terms-and-conditions-for-appsource-apps-for-business-central.pdf) and [Privacy Policy](https://www.theta.co.nz/contact-us/privacy-policy/) for a more detailes.
 
 ## See Also
-- [Getting Started](GettingStarted.md)
-- [FAQ](FAQ.md)
+- [Getting Started](../GettingStarted.md)
+- [FAQ](../FAQ.md)
