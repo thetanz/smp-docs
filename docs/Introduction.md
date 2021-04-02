@@ -12,7 +12,7 @@
 - A **single account** for all your apps **across any environment**.
 - Build in **customer support** thouth email (and chat in development).
 - **Translated by native speakers** into English, Dutch, French, German and Czech.
-- Works securely in **SaaS and On-Prem** (>=14.0)
+- Works securely in **SaaS and On-Prem** (>=15.0)
 
 
 ## Design Principles
