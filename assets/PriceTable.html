@@ -1,192 +1,178 @@
 <!DOCTYPE html>
 <html>
-<body>
 
-<style>
-html, body {
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-  font-family: 'Roboto';
-}
+<head>
+  <style>
+    html {
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
 
-.page {
-  min-height: 100vh;
-  background-color: #5EA9FF;
-  position: relative;
-  
-  &:after {
-    content: '';
-    width: 100%;
-    height: 50%;
-    position: absolute;
-    top: 50%;
-    background-color: #fff;
-    z-index: 1;
-  }
-}
+    .container {
+      margin: 0 auto;
+      padding: 50px 0 0;
+      max-width: 960px;
+      width: 100%;
+    }
 
-.pricing-container {
-  z-index: 2;
-  position: absolute;
-  left: 50%;
-  top: 50px;
-  transform: translate(-50%,0);
-  
-  @media screen and (min-width: 768px) {
-    background-color: #fff;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3);
-    width: 800px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .plan{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 250px;
-    margin: 30px 0px;
-    padding: 0px 20px;
-    
-    &:not(:last-child) {
-      border-right: 1px solid rgba(0,0,0,0.1);
-    }
-    
-    .plan-icon {
-      display: flex;
-      width: 150px;
-      height: 150px;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      z-index: 10;
-      font-size: 7rem;
-      color: #5EA9FF;
-      
-      &:after {
-        content: '';
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: rgba(93, 169, 254, 0.1);
-        z-index: 8;
-        position: absolute;
-      }
-    }
-    
-    .title {
-      text-transform: uppercase;
-      color: #444857;
-      line-height: 4rem;
-      letter-spacing: 2px;
-    }
-    
-    .features {
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      padding: 0;
-      
-      li {
-        line-height: 1.5rem;
-        width: 90%;
-        padding: 5px;
-        display: block;
-        text-align: center;
-        text-transform: uppercase;
-        border-top: 1px solid rgba(0,0,0,0.1);
-        font-size: 85%;
-        color: #5EA9FF;
-        
-        &:last-child {
-          border-bottom: 1px solid rgba(0,0,0,0.1);
-        }
-      }
-    }
-    
-    .price {
-      margin-top: 1rem;
-      font-size: 2.5rem;
-      line-height: 5rem;
-      color: #5EA9FF;
-    }
-    
-    @media screen and (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
+    .panel {
       background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3);
-      justify-content: space-between;
-      padding-bottom: 2rem;
+      border-radius: 3px;
+      border: 0px #ced9e0 solid;
+      padding: 15px 25px;
+      position: relative;
+      width: 100%;
+      z-index: 10;
     }
-  }
-}
-</style>
-<div class="page">
-  <div class="pricing-container">
-    
-    <div class="plan">
-      <div class="plan-icon">
-        <i class="far fa-paper-plane"></i>
+
+    .pricing-table {
+      box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 1px 1px rgba(16, 22, 26, 0.2), 0 2px 6px rgba(16, 22, 26, 0.2);
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: 900px) {
+      .pricing-table {
+        flex-direction: row;
+      }
+    }
+
+    .pricing-table * {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .pricing-plan {
+      border-bottom: 1px solid #e1f1ff;
+      padding: 25px;
+    }
+
+    .pricing-plan:last-child {
+      border-bottom: none;
+    }
+
+    @media (min-width: 900px) {
+      .pricing-plan {
+        border-bottom: none;
+        border-right: 1px solid #e1f1ff;
+        flex-basis: 100%;
+        padding: 25px 50px;
+      }
+
+      .pricing-plan:last-child {
+        border-right: none;
+      }
+    }
+
+    .pricing-img {
+      margin-bottom: 25px;
+      max-width: 100%;
+    }
+
+    .pricing-header {
+      color: #888;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .pricing-features {
+      color: #016FF9;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin: 50px 0 25px;
+    }
+
+    .pricing-features-item {
+      border-top: 1px solid #e1f1ff;
+      font-size: 12px;
+      line-height: 1.5;
+      padding: 15px 0;
+    }
+
+    .pricing-features-item:last-child {
+      border-bottom: 1px solid #e1f1ff;
+    }
+
+    .pricing-price {
+      color: #016FF9;
+      display: block;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .pricing-button {
+      border: 1px solid #9dd1ff;
+      border-radius: 10px;
+      color: #348EFE;
+      display: inline-block;
+      margin: 25px 0;
+      padding: 15px 35px;
+      text-decoration: none;
+      transition: all 150ms ease-in-out;
+    }
+
+    .pricing-button:hover,
+    .pricing-button:focus {
+      background-color: #e1f1ff;
+    }
+
+    .pricing-button.is-featured {
+      background-color: #48aaff;
+      color: #fff;
+    }
+
+    .pricing-button.is-featured:hover,
+    .pricing-button.is-featured:active {
+      background-color: #269aff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="panel pricing-table">
+
+      <div class="pricing-plan">
+        <img src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png" alt="" class="pricing-img">
+        <h2 class="pricing-header">Personal</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">Custom domains</li>
+          <li class="pricing-features-item">Sleeps after 30 mins of inactivity</li>
+        </ul>
+        <span class="pricing-price">Free</span>
+        <a href="#/" class="pricing-button">Sign up</a>
       </div>
-      <div class="title">
-        PERSONAL
+
+      <div class="pricing-plan">
+        <img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img">
+        <h2 class="pricing-header">Small team</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">Never sleeps</li>
+          <li class="pricing-features-item">Multiple workers for more powerful apps</li>
+        </ul>
+        <span class="pricing-price">$150</span>
+        <a href="#/" class="pricing-button is-featured">Free trial</a>
       </div>
-      <ul class="features">
-        <li>Custom Domains</li>
-        <li>Sleeps after 30 mins of inactivity</li>
-      </ul>
-      <div class="price">
-        $ 8.99
+
+      <div class="pricing-plan">
+        <img src="https://s21.postimg.cc/tpm0cge4n/space-ship.png" alt="" class="pricing-img">
+        <h2 class="pricing-header">Enterprise</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">Dedicated</li>
+          <li class="pricing-features-item">Simple horizontal scalability</li>
+        </ul>
+        <span class="pricing-price">$400</span>
+        <a href="#/" class="pricing-button">Free trial</a>
       </div>
+
     </div>
-    
-    <div class="plan">
-      <div class="plan-icon">
-        <i class="fas fa-fighter-jet"></i>
-      </div>
-      <div class="title">
-        SMALL TEAMS
-      </div>
-      <ul class="features">
-        <li>Custom Domains</li>
-        <li>Sleeps after 30 mins of inactivity</li>
-      </ul>
-      <div class="price">
-        $ 9.99
-      </div>
-    </div>
-    
-    <div class="plan">
-      <div class="plan-icon">
-        <i class="fas fa-space-shuttle"></i>
-      </div>
-      <div class="title">
-        ENTERPRISE
-      </div>
-      <ul class="features">
-        <li>Custom Domains</li>
-        <li>Sleeps after 30 mins of inactivity</li>
-      </ul>
-      <div class="price">
-        $ 10.99
-      </div>
-    </div>
-    
   </div>
-</div>
 </body>
+
 </html>
