@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+  html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-family: 'Roboto';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+  background-color: #5EA9FF;
+  position: relative;
+  
+  &:after {
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    background-color: #fff;
+    z-index: 1;
+  }
+}
+
+.pricing-container {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translate(-50%,0);
+  
+  @media screen and (min-width: 768px) {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3);
+    width: 800px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .plan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    margin: 30px 0px;
+    padding: 0px 20px;
+    
+    &:not(:last-child) {
+      border-right: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .plan-icon {
+      display: flex;
+      width: 150px;
+      height: 150px;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+      font-size: 7rem;
+      color: #5EA9FF;
+      
+      &:after {
+        content: '';
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: rgba(93, 169, 254, 0.1);
+        z-index: 8;
+        position: absolute;
+      }
+    }
+    
+    .title {
+      text-transform: uppercase;
+      color: #444857;
+      line-height: 4rem;
+      letter-spacing: 2px;
+    }
+    
+    .features {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      
+      li {
+        line-height: 1.5rem;
+        width: 90%;
+        padding: 5px;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        font-size: 85%;
+        color: #5EA9FF;
+        
+        &:last-child {
+          border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+      }
+    }
+    
+    .price {
+      margin-top: 1rem;
+      font-size: 2.5rem;
+      line-height: 5rem;
+      color: #5EA9FF;
+    }
+    
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3);
+      justify-content: space-between;
+      padding-bottom: 2rem;
+    }
+  }
+}
+</style>
+<div class="page">
+  <div class="pricing-container">
+    
+    <div class="plan">
+      <div class="plan-icon">
+        <i class="far fa-paper-plane"></i>
+      </div>
+      <div class="title">
+        PERSONAL
+      </div>
+      <ul class="features">
+        <li>Custom Domains</li>
+        <li>Sleeps after 30 mins of inactivity</li>
+      </ul>
+      <div class="price">
+        $ 8.99
+      </div>
+    </div>
+    
+    <div class="plan">
+      <div class="plan-icon">
+        <i class="fas fa-fighter-jet"></i>
+      </div>
+      <div class="title">
+        SMALL TEAMS
+      </div>
+      <ul class="features">
+        <li>Custom Domains</li>
+        <li>Sleeps after 30 mins of inactivity</li>
+      </ul>
+      <div class="price">
+        $ 9.99
+      </div>
+    </div>
+    
+    <div class="plan">
+      <div class="plan-icon">
+        <i class="fas fa-space-shuttle"></i>
+      </div>
+      <div class="title">
+        ENTERPRISE
+      </div>
+      <ul class="features">
+        <li>Custom Domains</li>
+        <li>Sleeps after 30 mins of inactivity</li>
+      </ul>
+      <div class="price">
+        $ 10.99
+      </div>
+    </div>
+    
+  </div>
+</div>dy<b</html>
