@@ -12,11 +12,6 @@
     },
     {
       "type": "item",
-      "title": "Feature Timeline",
-      "uri": "docs/FeatureTimeline.md"
-    },
-    {
-      "type": "item",
       "title": "Contributing",
       "uri": "docs/Contributing.md"
     },

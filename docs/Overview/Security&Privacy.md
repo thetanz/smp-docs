@@ -27,3 +27,7 @@ Category | Description | Entered | Stored | Used
 **Customer's Billing Info** | Customer's billing address, email and payment method | By user using SM Assisted Setup and Stripe Elements only for paid subscribers | Private within Publisher's Stripe Account | By Stripe to billing purposes
 
 Please check a complete [Terms and Conditions](https://www.theta.co.nz/media/3805/terms-and-conditions-for-appsource-apps-for-business-central.pdf) and [Privacy Policy](https://www.theta.co.nz/contact-us/privacy-policy/) for a more detailes.
+
+## See Also
+- [Getting Started](GettingStarted.md)
+- [FAQ](FAQ.md)

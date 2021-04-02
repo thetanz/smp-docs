@@ -1,2 +1,2 @@
 # Trail Period
-TBD
+Trial Periods

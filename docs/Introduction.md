@@ -10,21 +10,18 @@
 - **Secure customer authentication** using single sign-on (SAML2 based SSO).
 - A **simple API** allows you to integrate your extension with a few lines of code. 
 - A **single account** for all your apps **across any environment**.
-- Able to operate during network outages.
+- Build in **customer support** thouth email (and chat in development).
+- **Translated by native speakers** into English, Dutch, French, German and Czech.
+- Works securely in **SaaS and On-Prem** (>=14.0)
+
 
 ## Design Principles
 - **Security & Privacy**: Subscription Management takes on the responsibility of connecting Business Central end-users with application publishers. We don't take privacy and security lightly, and work closely with [industry specialists](https://theta.co.nz/cyber) to ensure our own development methodologies are in line, if not ahead of industry standards to ensure the resiliency and integrity of your data remains sound.
 - **Seamless Experience**: We feel a seamless customer journey is key to converting leads into paid users. We aim to deliver an optimal user experience across all application interfaces. This is related to the app following conventions of UI design, minimalism and simplicity with a well documented API.
 - **Publisher's Identification**: Subscription Management is a **publisher's tool** and should not emphasize any  identity other than that of the publisher. Therefore we have removed our branding from the UI wherever possible.
 
-## Table of contents
-- [Getting Started](./GettingStarted.md)
-- [Feature Timeline](./FeatureTimeline.md)
-- [Contributing](./Contributing.md)
-- [FAQ](./FAQ.md)
-- Manual
-  - [Mocking]()
-- Reference
-  - [SubscriptionMgt](./References/SubscriptionMgt.md)
-  - [Stripe Schema](./References/StripeSchema.md)
-  - [Changelog](./References/Changelog.md)
+## See Also
+- [Getting Started](GettingStarted.md)
+- [Security & Privacy](Overview/Security&Privacy.md)
+- [FAQ](FAQ.md)
+

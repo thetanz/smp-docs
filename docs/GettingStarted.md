@@ -31,4 +31,7 @@ Subscription Management is a separate extension which you use as a dependency fo
 ## 4. Basic Integration
 > This process still to be documented. Please contact [Product Team](mailto:volodymyr.leonov@theta.co.nz?subject=%5BSM%5D) for assistance.
 
-**Continue to ["SubscriptionMgt_SM_TSL Reference"](References/SubscriptionMgt.md)**
+## See Also
+- [SubscriptionMgt_SM_TSL Reference](References/SubscriptionMgt.md)
+- [Security & Privacy](Overview/Security&Privacy.md)
+- [FAQ](FAQ.md)
