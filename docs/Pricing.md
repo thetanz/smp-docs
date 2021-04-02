@@ -1,3 +1,3 @@
 # Pricing
 
-<iframe src="../assets/PriceTable.html" title="W3Schools Free Online Web Tutorials" height="500px" width="100%" style="border:none;overflow:hidden;" scrolling="no"></iframe>
+<iframe src="https://htmlpreview.github.io/?https://raw.githubusercontent.com/thetanz/smp-docs/master/assets/PriceTable.html" title="W3Schools Free Online Web Tutorials" height="500px" width="100%" style="border:none;overflow:hidden;" scrolling="no"></iframe>
