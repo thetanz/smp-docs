@@ -19,3 +19,7 @@ Stripe has its own volume-based discount program. Please [contact Stripe sales t
 [Like Stripe](https://support.stripe.com/questions/fee-discount-for-nonprofit-organizations), we would like to support qualifying non-profit organizations. Please [contact our product team](mailto:d365support@theta.co.nz?subject=SM%20for%20nonprofit%20discount%20request) with evidence of your non-profit status to get a 100% service discount.
 ## Open Source Discount
 At Theta we are big fans and supporters of Open Source initiatives. In support of the Business Central Open Source community, we are offering a 57% discount to all publishers which has all apps in open source. Please [contact our product team](mailto:d365support@theta.co.nz?subject=SM%20for%20open%20source%20discount%20request) to get a service discount.
+## See Also
+- [Getting Started](GettingStarted.md)
+- [Security & Privacy](Overview/Security&Privacy.md)
+- [FAQ](FAQ.md)
