@@ -6,7 +6,7 @@
 Transaction fees | **7%** | **3.4%+30¢** ([region specific](https://stripe.com/pricing))
 Both fees will be automatically applied to a transaction amount as transaction happens. There are no fees to refund a payment, but fees on the original payment will not be returned in case of a refund.
 ## Volume Discount
-We would like to support our publishers with volume-based discount program. Publishers with shows a significant sale over a year will receive a discount for a platform fee for a next full year as defined in a table below.
+We would like to support our publishers with volume-based discount program. Publishers that shows a significant sale over a year will receive a discount for a platform fee for a next full year as defined in a table below.
 
 | | <img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img"> | <img src="https://s21.postimg.cc/tpm0cge4n/space-ship.png" alt="" class="pricing-img">
 -|-
