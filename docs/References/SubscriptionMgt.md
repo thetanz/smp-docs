@@ -763,3 +763,5 @@ codeunit 50002 "MyExtensionTest"
 - [Stripe Schema](StripeSchema.md)
 - [Stripe Lifecycles](StripeLifecycles.md)
 - [Security & Privacy](../Overview/Security&Privacy.md)
+
+![Analytics](https://ga-beacon.appspot.com/G-P2LEDQJP25/smp/References/SubscriptionMgt?pixel)

@@ -31,3 +31,5 @@ Please check a complete [Terms and Conditions](https://www.theta.co.nz/media/380
 ## See Also
 - [Getting Started](../GettingStarted.md)
 - [FAQ](../FAQ.md)
+
+![Analytics](https://ga-beacon.appspot.com/G-P2LEDQJP25/smp/Overview/SecurityPrivacy?pixel)

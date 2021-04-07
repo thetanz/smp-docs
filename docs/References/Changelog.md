@@ -46,3 +46,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Getting Started](../GettingStarted.md)
 - [Security & Privacy](../Overview/Security&Privacy.md)
 - [Contribution](../Contributing.md)
+
+![Analytics](https://ga-beacon.appspot.com/G-P2LEDQJP25/smp/References/Changelog?pixel)

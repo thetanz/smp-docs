@@ -25,3 +25,4 @@
 - [Security & Privacy](Overview/Security&Privacy.md)
 - [FAQ](FAQ.md)
 
+![Analytics](https://ga-beacon.appspot.com/G-P2LEDQJP25/smp/Introduction?pixel)

@@ -21,3 +21,5 @@ SM is available to be used with any environment with network connectivity.
 ## See Also
 - [Getting Started](GettingStarted.md)
 - [Security & Privacy](Overview/Security&Privacy.md)
+
+![Analytics](https://ga-beacon.appspot.com/G-P2LEDQJP25/smp/FAQ?pixel)

@@ -23,3 +23,5 @@ At Theta we are big fans and supporters of Open Source initiatives. In support o
 - [Getting Started](GettingStarted.md)
 - [Security & Privacy](Overview/Security&Privacy.md)
 - [FAQ](FAQ.md)
+
+![Analytics](https://ga-beacon.appspot.com/G-P2LEDQJP25/smp/Pricing?pixel)
