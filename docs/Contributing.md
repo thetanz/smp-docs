@@ -15,5 +15,3 @@ Please [contact our security team through email](https://github.com/thetanz/smp-
 ## See Also
 - [Getting Started](GettingStarted.md)
 - [Security & Privacy](Overview/Security&Privacy.md)
-
-![Analytics](https://ga-beacon.appspot.com/G-P2LEDQJP25/smp/Contributing?pixel)

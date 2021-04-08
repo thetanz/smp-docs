@@ -14,5 +14,3 @@ unpaid | The latest invoice hasn’t been paid but the subscription remains in p
 ## See Also
 - [SubscriptionMgt_SM_TSL Reference](SubscriptionMgt.md)
 - [Stripe Schema](StripeSchema.md)
-
-![Analytics](https://ga-beacon.appspot.com/G-P2LEDQJP25/smp/References/StripeLifecycles?pixel)

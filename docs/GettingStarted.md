@@ -35,5 +35,3 @@ Subscription Management is a separate extension which you use as a dependency fo
 - [SubscriptionMgt_SM_TSL Reference](References/SubscriptionMgt.md)
 - [Security & Privacy](Overview/Security&Privacy.md)
 - [FAQ](FAQ.md)
-
-![Analytics](https://ga-beacon.appspot.com/G-P2LEDQJP25/smp/GettingStarted?pixel)
