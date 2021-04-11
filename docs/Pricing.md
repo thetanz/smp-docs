@@ -14,9 +14,13 @@ Sales (USD) | > 100,000 USD | > 500,000 USD
 Discount (%) | **-14% OFF** | **-28% OFF**
 Sales will be counted from the first successful customer payment and as the year passes and your sales volume is over defined threshold, the discount will be automatically applied to all publisher's active and future subscriptions. 
 
-Stripe has its own volume-based discount program. Please [contact Stripe sales team ](https://stripe.com/en-nz/contact/sales)to get more information about it. 
+Stripe has its own volume-based discount program. Please [contact Stripe sales team ](https://stripe.com/en-nz/contact/sales)to get more information about it.
+
+<div style="display: none;"> 
 ## Non-profit Discount
 [Like Stripe](https://support.stripe.com/questions/fee-discount-for-nonprofit-organizations), we would like to support non-profit organizations. Please [contact our product team](mailto:d365support@theta.co.nz?subject=SM%20for%20nonprofit%20discount%20request) with evidence of your non-profit status to get a 100% service discount.
+</div>
+
 ## Open Source Discount
 At Theta we are big fans and supporters of Open Source initiatives. In support of the Business Central Open Source community, we are offering a 57% discount to all publishers which have all apps in open source. Please [contact our product team](mailto:d365support@theta.co.nz?subject=SM%20for%20open%20source%20discount%20request) to get a service discount.
 ## See Also
