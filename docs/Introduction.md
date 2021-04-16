@@ -1,5 +1,5 @@
 # Introduction
-**Subscription Management** - is a turnkey solution that provides an easy and secure monetization mechanism for your Business Central app. Designed by Theta and backed by Stripe, it provides an automated and integrated solution to handle payments, manage your customers and subscriptions.
+**Subscription Management** - is a turnkey solution that provides an easy and secure [monetization](https://en.wikipedia.org/wiki/Software_monetization) mechanism for your Business Central app. Designed by [Theta](https://twitter.com/ThetaNet) and backed by [Stripe](https://stripe.com/use-cases/saas), it provides an automated and integrated solution to handle payments, manage your customers and subscriptions.
 
 ## Key Features 
 - **Backed by Stripe**, the #1 payment platform available in all Business Central SaaS countries.
