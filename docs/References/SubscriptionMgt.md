@@ -51,13 +51,14 @@ codeunit 50000 InstallExt
 {
     Subtype = Install;
 
-    [NonDebuggable]
     trigger OnInstallAppPerDatabase()
     var
         SecretProvider: Codeunit "App Key Vault Secret Provider";
         SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
         Info: ModuleInfo;
+        [NonDebuggable]
         SecretKey: Text;
+        [NonDebuggable]
         PublishableKey: Text;
         ProductID: Text[100];
     begin
@@ -84,13 +85,14 @@ codeunit 50001 UpgradeExt
 {
     Subtype = Upgrade;
 
-    [NonDebuggable]
     trigger OnUpgradePerDatabase()
     var
         SecretProvider: Codeunit "App Key Vault Secret Provider";
         SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
         Info: ModuleInfo;
+        [NonDebuggable]
         SecretKey: Text;
+        [NonDebuggable]
         PublishableKey: Text;
         ProductID: Text[100];
     begin
@@ -136,13 +138,14 @@ codeunit 50000 InstallExt
 {
     Subtype = Install;
 
-    [NonDebuggable]
     trigger OnInstallAppPerDatabase()
     var
         SecretProvider: Codeunit "App Key Vault Secret Provider";
         SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
         Info: ModuleInfo;
+        [NonDebuggable]
         SecretKey: Text;
+        [NonDebuggable]
         PublishableKey: Text;
         ProductID: Text[100];
     begin
@@ -169,13 +172,14 @@ codeunit 50001 UpgradeExt
 {
     Subtype = Upgrade;
 
-    [NonDebuggable]
     trigger OnUpgradePerDatabase()
     var
         SecretProvider: Codeunit "App Key Vault Secret Provider";
         SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
         Info: ModuleInfo;
+        [NonDebuggable]
         SecretKey: Text;
+        [NonDebuggable]
         PublishableKey: Text;
         ProductID: Text[100];
     begin
