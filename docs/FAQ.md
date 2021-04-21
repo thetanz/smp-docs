@@ -1,9 +1,9 @@
 # FAQ
 
 ## How to start using Subscription Management? 
-Subscription Mgt. (SM) is a separate extension which you use as a dependency for each extension you would like to monetize. During the publisher onboarding process, we will provide a development version to setup integration. When integration is defined, we will provide an AppSource version dependency references which should be used for your AppSource publication. [More info](./GettingStarted.md).
+Subscription Management is a separate extension which you use as a dependency for each extension you would like to monetize. During the publisher onboarding process, we will provide a development version to setup integration. When integration is defined, we will provide an AppSource version dependency references which should be used for your AppSource publication. [More info](./GettingStarted.md).
 ## Which versions of NAV/BC Subscription Management supports? 
-Version 15 is currently the lowest supported version. We are planning to support version 14 within a publisher RC, this will be released in 2021 Q1. 
+Version 15 is currently the lowest supported version. There are no plans to support any lower version. 
 ## How to enable sales though partners? 
 Currently we offer the ability to track a partner reference within SM. We are planning to support automatic partner billing in future releases. Currently we are collecting requirements to make sure that partner engagement scenarios are sufficiently covered. 
 ## Which Stripe pricing models is possible to use with Subscription Mgt.? 
