@@ -287,7 +287,7 @@ TBD
 ### GetQuantity (Method)
 Returns the current quantity of the specified product. Default return value is `1` if the quantity could not found.
 #### GetQuantity(Text,Text[100])
-![](https://img.shields.io/badge/version-Unreleased-blue)
+<a href="../References/Changelog.md#1110-2020-05-13" style="border-bottom-width:0px;background:transparent;padding:0px;">![](https://img.shields.io/badge/version-v1.1.1.0-blue)</a>
 ```sql
 [NonDebuggable]
 GetQuantity(SecretKey:Text;ProductID:Text[100]):BigInteger
@@ -300,7 +300,7 @@ GetQuantity(SecretKey:Text;ProductID:Text[100]):BigInteger
 ##### Returns
 | Type | Description |
 | - | - |
-| BigInteger | Currrent quantity of the product |
+| BigInteger | Current quantity of the product |
 ##### Examples
 ```sql
 pageextension 50000 MyExtension extends "Customer Card"
@@ -765,5 +765,5 @@ codeunit 50002 "MyExtensionTest"
 
 ## See Also
 - [Stripe Schema](StripeSchema.md)
-- [Stripe Lifecycles](StripeLifecycles.md)
+- [Stripe Lifecycle](StripeLifecycle.md)
 - [Security & Privacy](../Overview/Security&Privacy.md)

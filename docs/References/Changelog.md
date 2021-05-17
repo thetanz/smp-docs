@@ -7,17 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - SubscriptionMgt: SetQuantity
+
+## [1.1.1.0] `(2021-05-13)`
+### Added
+- Connect: Platform connected version allows self-onboarding for publishers
 - SubscriptionMgt: GetQuantity
 - Payment Screen: Total Amount to Pay
 - Subscription States: Pastdue, Incomplete, Incomplete_Expired, Unpaid, Canceled
 - Environments\Tenant Limit: per customer
+- Daily/Weekly: new payment intervals supported 
 ### Changed
+- Intro Screen UX redesign and no "accept" condition requiered
 - Notifications Action: "Skip for today" to "Remind me later"
+- Customer ID moved to private storage
+- Common v1.1.1.0: New version with better security features
 ### Fixed
 - Version 17 Assisted Setup layout
 - Assisted Setup signout message
 - Prorated upcoming payment data & formats 
 - Upcoming invoice data cache
+- Avility to skip payment method setup
 ## [1.0.5.0] `(2021-01-13)`
 ### Added
 - Support all [Stripe TaxID types](https://stripe.com/docs/billing/customer/tax-ids#supported-tax-id)

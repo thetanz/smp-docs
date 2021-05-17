@@ -1,7 +1,7 @@
-# Stripe Lifecycles
+# Stripe Lifecycle
 
 ## Subscription
-| Status | Description | Action Required (as applicable) | Subscription Management Behaviour
+| Status | Description | Action Required (as applicable) | Subscription Management Behavior
 | - | - | - |
 active | The subscription is in good standing and the most recent payment was successful. It’s safe to provision your product for your customer. |  | |
 trialing | The subscription is currently in a trial period and it’s safe to provision your product for your customer. The subscription transitions automatically to active when the first payment is made. |  | |
