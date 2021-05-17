@@ -50,13 +50,13 @@
     },
     {
       "type": "item",
-      "title": "Stripe Lifecycles",
-      "uri": "docs/References/StripeLifecycles.md"
+      "title": "Stripe Lifecycle",
+      "uri": "docs/References/StripeLifecycle.md"
     },
     {
       "type": "item",
-      "title": "Trableshouting",
-      "uri": "docs/References/Trableshouting.md"
+      "title": "Troubleshooting",
+      "uri": "docs/References/Troubleshooting.md"
     },
     {
       "type": "item",
