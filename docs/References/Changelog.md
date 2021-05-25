@@ -17,16 +17,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Environments\Tenant Limit: per customer
 - Daily/Weekly: new payment intervals supported 
 ### Changed
-- Intro Screen UX redesign and no "accept" condition requiered
+- Intro Screen UX redesign and no "accept" condition required
 - Notifications Action: "Skip for today" to "Remind me later"
 - Customer ID moved to private storage
 - Common v1.1.1.0: New version with better security features
 ### Fixed
 - Version 17 Assisted Setup layout
-- Assisted Setup signout message
+- Assisted Setup sign-out message
 - Prorated upcoming payment data & formats 
 - Upcoming invoice data cache
-- Avility to skip payment method setup
+- Ability to skip payment method setup
 ## [1.0.5.0] `(2021-01-13)`
 ### Added
 - Support all [Stripe TaxID types](https://stripe.com/docs/billing/customer/tax-ids#supported-tax-id)
