@@ -8,15 +8,15 @@ Before progressing, please ensure that Subscription Management extensions instal
       "id": "6717135a-d80c-4a63-8a3a-5ded6717135a",
       "publisher": "Theta Systems Limited",
       "name": "SubscriptionMgt",
-      "version": "1.0.0.0"
+      "version": "1.1.1.0"
     }
 ]
 ```
 ## Common Parameters
 | Name | Type | Description |
 | - | - | - |
-| SecretKey | Text | Your [Stripe API Secret](https://stripe.com/docs/keys#obtain-api-keys)<br> :warning: This key can perform any API request to Stripe without restriction, we highly recommend you leverage a [secure vault](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault-overview) to safeguard the integrity of your account. |
-| PublishableKey | Text | Your [Stripe Publishable Key](https://stripe.com/docs/keys#obtain-api-keys)<br> This key exists solely to identify your account with Stripe and can be considered a public identified that can safely remain in source. |
+| SecretKey | Text | Your [Stripe API Secret](https://stripe.com/docs/keys#obtain-api-keys)<br> **This key can perform any API request to Stripe without restriction, we highly recommend you leverage a [secure vault](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault-overview) to safeguard the integrity of your account.** |
+| PublishableKey | Text | Your [Stripe Publishable Key](https://stripe.com/docs/keys#obtain-api-keys)<br> *This key exists solely to identify your account with Stripe and can be considered a public identified that can safely remain in source.* |
 | ProductID | Text\[100\] | Your [Stripe Product Identifier](https://dashboard.stripe.com/products)<br> The identifier of the product associated with your extension. |
 <!-- theme: info -->
 > _SecretKey_, _PublishableKey_ and _ProductID_ values differ across your Stripe account between your test and live modes. Use test values during development/testing and make sure you use your live key in your production ready package. The easiest way to do this is by replacing the [keyVaultUrls](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault#specify-the-azure-key-vault-in-extensions) values within your continuous integration process.

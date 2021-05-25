@@ -14,7 +14,7 @@ Sales (USD) | > 100,000 USD | > 500,000 USD
 Discount (%) | **-14% OFF** | **-28% OFF**
 Sales will be counted from the first successful customer payment and as the year passes and your sales volume is over defined threshold, the discount will be automatically applied to all publisher's active and future subscriptions. 
 
-Stripe has its own volume-based discount program. Please [contact Stripe sales team ](https://stripe.com/en-nz/contact/sales)to get more information about it.
+Stripe has its own volume-based discount program. Please [contact Stripe sales team](https://stripe.com/en-nz/contact/sales) to get more information about it.
 
 <div style="display: none;"> 
 ## Non-profit Discount
