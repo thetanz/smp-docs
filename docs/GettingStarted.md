@@ -122,7 +122,7 @@ codeunit 50002 UpgradeExt
 ```
 <!-- type: tab-end -->
 
-> To block your customers from using your application without an account you can use a combination of [IsActive](References/SubscriptionMgt.md#isactive-method)/[ShowNotification](References/SubscriptionMgt.md#shownotification-method) within your application UX entry points or use them to control extension spesific ApplicaitonArea if such has been defined. 
+> To block your customers from using your application without an account you can use a combination of [IsActive](References/SubscriptionMgt.md#isactive-method)/[ShowNotification](References/SubscriptionMgt.md#shownotification-method) within your application UX entry points or use them to control extension specific ApplicaitonArea if such has been defined. 
 
 ## See Also
 - [SubscriptionMgt_SM_TSL Reference](References/SubscriptionMgt.md)
