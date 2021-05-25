@@ -10,7 +10,10 @@ Subscription Management uses your Stripe account as a backend for all data. All 
 
 <a href="https://smp.365extensions.com/forms/account" style="border-bottom-style:none;padding:10px 90px;background-image:url('https://dabuttonfactory.com/button.png?t=Connect+with+Stripe&f=Open+Sans-Bold&ts=14&tc=fff&hp=23&vp=14&w=180&h=38&c=4&bgt=unicolored&bgc=635bff')"></a>
 ## 2. Setup Stripe Product & Price
-> This process still to be documented. Please contact [Product Team](mailto:volodymyr.leonov@theta.co.nz?subject=%5BSM%5D) for assistance.
+Subscription Management use [Stripe Product](https://stripe.com/docs/billing/prices-guide) to represent Publisher's proposition to customers. Please follow [documentation from Stripe](https://support.stripe.com/questions/how-to-create-products-and-prices) to set it up. As for now Subscription Management supports [Standard](https://stripe.com/docs/billing/subscriptions/model#package-standard-pricing), [Package](https://stripe.com/docs/billing/subscriptions/model#package-standard-pricing) and [Graduated](https://stripe.com/docs/billing/subscriptions/model#tiered-billing) pricing models. [Volume ("metered")](https://stripe.com/docs/billing/subscriptions/model#licensed-and-metered) one is in a [pipeline](https://github.com/thetanz/smp-docs/issues/14). 
+
+> To extend your product pricing options (by currencies and billing intervals), just add a new price with a same name. Please check our [Stripe Schema](StripeSchema.md#product) documentation to get more information about how Stripe configuration implemented in Subscription Management. 
+
 ## 3. Installing dependencies
 <img align="right" src="https://www.plantuml.com/plantuml/png/SoWkIImgAStDuOgEp2yjKd2jA4dDAyxCpujLqDMrKuWEBaqgJYxAB2W12lccbyHoEQJcfG2L0m00" />
 Subscription Management is a separate extension which you use as a dependency for each extension you would like to monetize.
@@ -24,12 +27,102 @@ Subscription Management is a separate extension which you use as a dependency fo
       "id": "6717135a-d80c-4a63-8a3a-5ded6717135a",
       "publisher": "Theta Systems Limited",
       "name": "SubscriptionMgt",
-      "version": "1.0.0.0"
+      "version": "1.1.1.0"
     }
 ]
 ```
 ## 4. Basic Integration
-> This process still to be documented. Please contact [Product Team](mailto:volodymyr.leonov@theta.co.nz?subject=%5BSM%5D) for assistance.
+For Subscription Management to be able to handle your extension monetization, it should be registered using [TryAddProduct API](References/SubscriptionMgt.md#tryaddproduct-method). We recommend to execute it during installation\upgrade of your extension. Example: 
+<!--
+type: tab
+title: SubscriptionMgtProxy.Codeunit.al
+-->
+```sql
+codeunit 50000 SubscriptionMgtProxy
+{
+    [NonDebuggable]
+    internal procedure AddProduct()
+    var
+        SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
+        Info: ModuleInfo;
+        TryAddProductErr: Label 'Failed to register product.';
+    begin
+        if NavApp.GetCurrentModuleInfo(Info) then
+            if SubscriptionMgt.TryAddProduct(
+                GetSecret('StripeSecretKey'),
+                GetSecret('StripePublishableKey'),
+                Info,
+                GetSecret('StripeProductID'))
+            then
+                exit;
+        LogError('SubscriptionMgtProxy-0001', TryAddProductErr)
+    end;
+
+    [NonDebuggable]
+    local procedure GetSecret(Name: Text) Result: Text
+    var
+        SecretProvider: Codeunit "App Key Vault Secret Provider";
+        GetSecretErr: Label 'Failed to get ''%1'' secret.', Comment = '%1 - Secret Name';
+    begin
+        // TODO: Can be replaced with your own secret provider
+        if SecretProvider.TryInitializeFromCurrentApp() then
+            if SecretProvider.GetSecret(Name, Result) then
+                exit;
+        LogError('SubscriptionMgtProxy-0002', GetSecretErr)
+    end;
+
+    local procedure LogError(EventId: Text; Message: Text)
+    var
+        CustDimension: Dictionary of [Text, Text];
+    begin
+        // TODO: Can be replaced with Error if installation error is acceptable.
+        LogMessage(
+            EventId,
+            Message,
+            Verbosity::Critical,
+            DataClassification::EndUserPseudonymousIdentifiers,
+            TelemetryScope::ExtensionPublisher,
+            CustDimension)
+    end;
+}
+```
+<!--
+type: tab
+title: InstallExt.Codeunit.al
+-->
+```sql
+codeunit 50001 InstallExt
+{
+    Subtype = Install;
+
+    trigger OnInstallAppPerDatabase()
+    var
+        SubscriptionMgtProxy: Codeunit SubscriptionMgtProxy;
+    begin
+        SubscriptionMgtProxy.AddProduct()
+    end;
+}
+```
+<!--
+type: tab
+title: UpgradeExt.Codeunit.al
+-->
+```sql
+codeunit 50002 UpgradeExt
+{
+    Subtype = Upgrade;
+
+    trigger OnUpgradePerDatabase()
+    var
+        SubscriptionMgtProxy: Codeunit SubscriptionMgtProxy;
+    begin
+        SubscriptionMgtProxy.AddProduct()
+    end;
+}
+```
+<!-- type: tab-end -->
+
+> To block your customers from using your application without an account you can use a combination of [IsActive](References/SubscriptionMgt.md#isactive-method)/[ShowNotification](References/SubscriptionMgt.md#shownotification-method) within your application UX entry points or use them to control extension spesific ApplicaitonArea if such has been defined. 
 
 ## See Also
 - [SubscriptionMgt_SM_TSL Reference](References/SubscriptionMgt.md)
