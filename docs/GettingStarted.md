@@ -18,7 +18,7 @@ Subscription Management use [Stripe Product](https://stripe.com/docs/billing/pri
 <img align="right" src="https://www.plantuml.com/plantuml/png/SoWkIImgAStDuOgEp2yjKd2jA4dDAyxCpujLqDMrKuWEBaqgJYxAB2W12lccbyHoEQJcfG2L0m00" />
 Subscription Management is a separate extension which you use as a dependency for each extension you would like to monetize.
 
-1. [Get Subscription Management](https://smp.365extensions.com/forms/install) extension into your development environment.
+1. <a href="https://smp.365extensions.com/forms/install">Get Subscription Management</a> extension into your development environment.
 2. Add a dependency to your extension's `app.json`.
 ```json
 "dependencies": [
