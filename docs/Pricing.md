@@ -12,7 +12,7 @@ We support our publishers with a volume-based discount program. Publishers that 
 -|-
 Sales (USD) | > 100,000 USD | > 500,000 USD
 Transaction fee | **6% (14% discount)** | **5% (28% discount)**
-The anniversary date will be set with the first successful customer payment. The discount will then be applied automatically to all future transactions if you have achieved one of the thresholds at the next anniversary date. 
+The anniversary date will be set with the first successful customer payment. If you have achieved one of the thresholds, the discount will then be applied automatically to all future transactions.
 
 Stripe has its own volume-based discount program. Please [contact the Stripe sales team](https://stripe.com/en-nz/contact/sales) to get more information about it.
 
