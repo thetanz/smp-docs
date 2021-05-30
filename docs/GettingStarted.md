@@ -32,7 +32,7 @@ Subscription Management is a separate extension which you use as a dependency ap
 ]
 ```
 ## 4. Basic Integration
-Subscription Management need to be registered from your app using [TryAddProduct API](References/SubscriptionMgt.md#tryaddproduct-method). We recommend executing it during installation and upgrade of your extension to the tenant. Example: 
+Use [TryAddProduct API](References/SubscriptionMgt.md#tryaddproduct-method) to enable Subscription Management to handle your extension monetization. We recommend executing it during installation and upgrade of your extension to the tenant. Example: 
 <!--
 type: tab
 title: SubscriptionMgtProxy.Codeunit.al
