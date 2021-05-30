@@ -6,7 +6,7 @@ This guide shows how easy it is to get started with Subscription Management. Fol
 Subscription Management uses your Stripe account as a backend for all data. All your products as well as future customers and subscriptions will be stored and handled directly within Stripe.
 
 <!-- theme: warning -->
-> The Subscription Management app (not us) will have full access to your Stripe account. If you already have a Stripe account then we recommended you create a separate account solely for this purpose.
+> The Subscription Management app will have full access to your Stripe account. If you already have a Stripe account then we recommended you create a separate account solely for this purpose.
 
 <a href="https://smp.365extensions.com/forms/account" style="border-bottom-style:none;padding:10px 90px;background-image:url('https://dabuttonfactory.com/button.png?t=Connect+with+Stripe&f=Open+Sans-Bold&ts=14&tc=fff&hp=23&vp=14&w=180&h=38&c=4&bgt=unicolored&bgc=635bff')"></a>
 ## 2. Setup Stripe Product & Price
