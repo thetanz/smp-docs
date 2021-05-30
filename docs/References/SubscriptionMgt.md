@@ -1,6 +1,6 @@
 # SubscriptionMgt_SM_TSL (Codeunit)
-SubscriptionMgt_SM_TSL codeunit contains all the code blocks for the integration aspect of Subscription Management product. It comprises of multiple functions as described below. 
-Before progressing, please ensure that Subscription Management extensions installed into your development environment and right dependency defined in your extension's `app.json`: 
+SubscriptionMgt_SM_TSL codeunit contains all the code blocks for the integration aspect of the Subscription Management app. It comprises multiple functions as described below. 
+Before progressing, please ensure that the Subscription Management extension is installed into your development environment and the right dependency has been defined in your extension's `app.json`: 
 ```json
 "dependencies": [
    ...
@@ -16,14 +16,14 @@ Before progressing, please ensure that Subscription Management extensions instal
 | Name | Type | Description |
 | - | - | - |
 | SecretKey | Text | Your [Stripe API Secret](https://stripe.com/docs/keys#obtain-api-keys)<br> **This key can perform any API request to Stripe without restriction, we highly recommend you leverage a [secure vault](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault-overview) to safeguard the integrity of your account.** |
-| PublishableKey | Text | Your [Stripe Publishable Key](https://stripe.com/docs/keys#obtain-api-keys)<br> *This key exists solely to identify your account with Stripe and can be considered a public identified that can safely remain in source.* |
+| PublishableKey | Text | Your [Stripe Publishable Key](https://stripe.com/docs/keys#obtain-api-keys)<br> *This key exists solely to identify your account with Stripe and can be considered a public identified key that can safely remain in source.* |
 | ProductID | Text\[100\] | Your [Stripe Product Identifier](https://dashboard.stripe.com/products)<br> The identifier of the product associated with your extension. |
 <!-- theme: info -->
-> _SecretKey_, _PublishableKey_ and _ProductID_ values differ across your Stripe account between your test and live modes. Use test values during development/testing and make sure you use your live key in your production ready package. The easiest way to do this is by replacing the [keyVaultUrls](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault#specify-the-azure-key-vault-in-extensions) values within your continuous integration process.
+> _SecretKey_, _PublishableKey_ and _ProductID_ values differ across your Stripe account between your test and live modes. Use test values during development/testing and make sure you use your live key in your production-ready package. The easiest way to do this is by replacing the [keyVaultUrls](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault#specify-the-azure-key-vault-in-extensions) values within your continuous integration process.
 
 ## Integration API
 ### TryAddProduct (Method)
-Requests SM to start handling your extension. It's recommended to call it with `OnInstallAppPerDatabase` and `OnUpgradePerDatabase` events.
+Requests Subscription Management to start handling your extension. It's recommended to call it with `OnInstallAppPerDatabase` and `OnUpgradePerDatabase` events.
 #### TryAddProduct(Text,Text,ModuleInfo,Text[100])
 ![](https://img.shields.io/badge/version-v1.0.0.0-blue)
 ```sql
@@ -40,7 +40,7 @@ TryAddProduct(SecretKey:Text;PublishableKey:Text;Info:ModuleInfo;ProductID:Text[
 ##### Returns
 | Type | Description |
 | - | - |
-| Boolean | Indicating whether operation completed with success |
+| Boolean | Indicating whether the operation completed successfully |
 ##### Examples
 <!--
 type: tab
@@ -122,12 +122,12 @@ TryAddProduct(SecretKey:Text;PublishableKey:Text;AppID:Guid;ProductID:Text[100])
 | - | - | - |
 | SecretKey | Text | [Stripe Secret Key](#common-parameters) |
 | PublishableKey | Text | [Stripe Publishable Key](#common-parameters) |
-| AppID | Guid | It's [unique ID of your extension](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-json-files#Appjson). You can retrieve it from [current module info](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/methods-auto/moduleinfo/moduleinfo-id-method). |
+| AppID | Guid | The [unique ID of your extension](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-json-files#Appjson). You can retrieve it from [current module info](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/methods-auto/moduleinfo/moduleinfo-id-method). |
 | ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
 ##### Returns
 | Type | Description |
 | - | - |
-| Boolean | Indicating whether operation completed with success |
+| Boolean | Indicating whether the operation completed successfully |
 ##### Examples
 <!--
 type: tab
@@ -200,7 +200,7 @@ codeunit 50001 UpgradeExt
 <!-- type: tab-end -->
 
 ### IsActive (Method)
-Checks whether product subscription is in one of the active states (active, trialing, past_due,incomplete, incomplete_expired).
+Checks whether the product subscription is in one of the active states (active, trialing, past_due, incomplete, incomplete_expired).
 
 #### IsActive(Text,Text[100])
 ![](https://img.shields.io/badge/version-v1.0.0.0-blue)
@@ -243,7 +243,7 @@ pageextension 50000 MyExtension extends "Customer Card"
 }
 ```
 ### IsTrialing (Method)
-Returns whether a subscription is under a trial period currently.
+Returns whether a subscription is currently under a trial period.
 #### IsTrialing(Text,Text[100])
 ![](https://img.shields.io/badge/version-v1.0.0.0-blue)
 ```sql
@@ -258,13 +258,13 @@ IsTrialing(SecretKey:Text;ProductID:Text[100]):Boolean
 ##### Returns
 | Type | Description |
 | - | - |
-| Boolean | Indicates whether a subscription is under a trial period currently. |
+| Boolean | Indicates whether a subscription is currently under a trial period. |
 ##### Examples
 ```sql
 TBD
 ```
 ### GetPriceName (Method)
-Returns name of the user selected plan. Returns `''` if no plan selected.
+Returns name of the user selected plan. Returns `''` if no plan is selected.
 #### GetPriceName(Text,Text[100])
 <a href="../References/Changelog.md#1040-2020-12-13" style="border-bottom-width:0px;background:transparent;padding:0px;">![](https://img.shields.io/badge/version-v1.0.4.0-blue)</a>
 ```sql
@@ -285,7 +285,7 @@ GetPriceName(SecretKey:Text;ProductID:Text[100]):Text
 TBD
 ```
 ### GetQuantity (Method)
-Returns the current quantity of the specified product. Default return value is `1` if the quantity could not found.
+Returns the current quantity of the specified product. Default return value is `1` if the quantity could not be found.
 #### GetQuantity(Text,Text[100])
 <a href="../References/Changelog.md#1110-2020-05-13" style="border-bottom-width:0px;background:transparent;padding:0px;">![](https://img.shields.io/badge/version-v1.1.1.0-blue)</a>
 ```sql
@@ -360,7 +360,7 @@ SetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger):Boolean
 ##### Returns
 | Type | Description |
 | - | - |
-| Boolean | `true` if the update process completed with success, otherwise returns `false` |
+| Boolean | `true` if the update process completed successfully, otherwise returns `false` |
 ##### Examples
 ```sql
 page 50000 "My Product Page"
@@ -439,7 +439,7 @@ SetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger;ResetBillingC
 ##### Returns
 | Type | Description |
 | - | - |
-| Boolean | `true` if the update process completed with success, otherwise returns `false` |
+| Boolean | `true` if the update process completed successfully, otherwise returns `false` |
 ##### Examples
 ```sql
 page 50000 "My Product Page"
@@ -519,8 +519,8 @@ SetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger;ResetBillingC
 | SecretKey | Text | [Stripe Secret Key](#common-parameters) |
 | ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
 | Quantity | BigInteger | Quantity of the product |
-| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to a next invoice date. |
-| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with an upcoming invoice information where there will be an information about what next payment will look like and question to proceed. |
+| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to the next invoice date. |
+| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with upcoming invoice information and information about what the next payment will look like and asks the user to proceed. |
 ##### Returns
 | Type | Description |
 | - | - |
@@ -598,7 +598,7 @@ page 50000 "My Product Page_SM_TSL"
 }
 ```
 ### ShowNotification (Method)
-Force SM to show a notification to user to act on subscription. It will return false if there are nothing to show.
+Force Subscription Management to show a notification to the user to act on the subscription. It will return false if there is nothing to show.
 #### ShowNotification(Text,Text[100])
 <a href="../References/Changelog.md#1040-2020-12-13" style="border-bottom-width:0px;background:transparent;padding:0px;">![](https://img.shields.io/badge/version-v1.0.4.0-blue)</a>
 ```sql
