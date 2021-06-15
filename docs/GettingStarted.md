@@ -12,7 +12,7 @@ Subscription Management uses your Stripe account as a backend for all data. All 
 ## 2. Setup Stripe Product & Price
 Subscription Management uses [Stripe Product](https://stripe.com/docs/billing/prices-guide) to represent Publisher's proposition to customers. Please follow [documentation from Stripe](https://support.stripe.com/questions/how-to-create-products-and-prices) to set it up. As for now Subscription Management supports [Standard](https://stripe.com/docs/billing/subscriptions/model#package-standard-pricing), [Package](https://stripe.com/docs/billing/subscriptions/model#package-standard-pricing) and [Graduated](https://stripe.com/docs/billing/subscriptions/model#tiered-billing) pricing models. [Volume ("metered")](https://stripe.com/docs/billing/subscriptions/model#licensed-and-metered) one is in a [pipeline](https://github.com/thetanz/smp-docs/issues/14). 
 
-> To extend your product pricing options (by currencies and billing intervals), just add a new price with the same name. Please check our [Stripe Schema](StripeSchema.md#product) documentation to get more information about how to set up the Stripe configuration implemented in Subscription Management. 
+> To extend your product pricing options (by currencies and billing intervals), just add a new price with the same name. Please check our [Stripe Schema](References/StripeSchema.md#product) documentation to get more information about how to set up the Stripe configuration implemented in Subscription Management. 
 
 ## 3. Installing dependencies
 <img align="right" src="https://www.plantuml.com/plantuml/png/SoWkIImgAStDuOgEp2yjKd2jA4dDAyxCpujLqDMrKuWEBaqgJYxAB2W12lccbyHoEQJcfG2L0m00" />
