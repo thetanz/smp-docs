@@ -8,6 +8,8 @@ on:
 jobs:
   alert:
     runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
     steps:
       - uses: danhellem/github-actions-issue-to-work-item@master
         env:
