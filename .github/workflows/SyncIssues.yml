@@ -1,5 +1,8 @@
 name: Sync issue to Azure DevOps work item
 
+concurrency: 
+  group: ${{ github.action }}
+
 on:
   issues:
     types:
