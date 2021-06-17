@@ -1,7 +1,7 @@
 name: Sync issue to Azure DevOps work item
 
 concurrency: 
-  group: ${{ github.action }}
+  group: group-${{ github.workflow }}
 
 on:
   issues:
