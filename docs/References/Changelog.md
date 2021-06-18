@@ -6,8 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- SubscriptionMgt: SetQuantity
-
+- SubscriptionMgt: GetProductLines
+- SubscriptionMgt: SetProductLines
+- SubscriptionMgt: OnLookupProductLines
+### Changed
+- SubscriptionMgt: GetQuantity to CountProductLines
+### Fixed
+- Notification for pastDue status [#21](https://github.com/thetanz/smp-docs/issues/21)
+- Cannot finish with payment method exists [#22](https://github.com/thetanz/smp-docs/issues/22)
+- System refresh trial with second product subscription created [#23](https://github.com/thetanz/smp-docs/issues/23)
+- Clear Accountdata when Parent App is uninstalled
 ## [1.1.1.0] `(2021-05-13)`
 ### Added
 - Connect: Platform connected version allows self-onboarding for publishers

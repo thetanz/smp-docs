@@ -284,13 +284,13 @@ GetPriceName(SecretKey:Text;ProductID:Text[100]):Text
 ```sql
 TBD
 ```
-### GetQuantity (Method)
+### CountProductLines (Method)
 Returns the current quantity of the specified product. Default return value is `1` if the quantity could not be found.
-#### GetQuantity(Text,Text[100])
-<a href="../References/Changelog.md#1110-2020-05-13" style="border-bottom-width:0px;background:transparent;padding:0px;">![](https://img.shields.io/badge/version-v1.1.1.0-blue)</a>
+#### CountProductLines(Text,Text[100])
+![](https://img.shields.io/badge/version-Unreleased-blue)
 ```sql
 [NonDebuggable]
-GetQuantity(SecretKey:Text;ProductID:Text[100]):BigInteger
+CountProductLines(SecretKey:Text;ProductID:Text[100]):BigInteger
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -303,299 +303,204 @@ GetQuantity(SecretKey:Text;ProductID:Text[100]):BigInteger
 | BigInteger | Current quantity of the product |
 ##### Examples
 ```sql
-pageextension 50000 MyExtension extends "Customer Card"
-{
-    layout
-    {
-        area(content)
-        {
-                field(ProductQuantity; ProductQuantity)
-                {
-                    ApplicationArea = All;
-                    Editable = false;
-                    Caption = 'Product Quantity';
-                    ToolTip = 'Specifies the quantity of product';
-                }
-        }
-    }
-
-    trigger OnAfterGetRecord()
-    begin
-        ProductQuantity := GetQuantity();
-    end;
-
-    [NonDebuggable]
-    procedure GetQuantity(): Integer
-    var
-        SecretProvider: Codeunit "App Key Vault Secret Provider";
-        SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
-        SecretKey: Text;
-        ProductID: Text[100];
-    begin
-        if SecretProvider.TryInitializeFromCurrentApp() then
-            if SecretProvider.GetSecret('SecretKey', SecretKey) and
-               SecretProvider.GetSecret('MyAppProductID', ProductID)
-            then
-                exit(SubscriptionMgt.GetQuantity(SecretKey, ProductID));
-    end;
-
-    var
-      ProductQuantity: BigInteger;
-}
+TBD
 ```
-### SetQuantity (Method)
-Sets the current quantity for the specified product. Returns `true` if the update process is successful, otherwise returns `false`.
-#### SetQuantity(Text,Text[100],BigInteger)
+#### CountProductLines(Text,Text[100],Enum)
 ![](https://img.shields.io/badge/version-Unreleased-blue)
 ```sql
 [NonDebuggable]
-SetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger):Boolean
+CountProductLines(SecretKey:Text;ProductID:Text[100];Scope:Enum):BigInteger
 ```
 ##### Parameters
 | Name | Type | Description |
 | - | - | - |
 | SecretKey | Text | [Stripe Secret Key](#common-parameters) |
 | ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| Quantity | BigInteger | Quantity of the product |
+| Scope | Enum | TBD |
 ##### Returns
 | Type | Description |
 | - | - |
-| Boolean | `true` if the update process completed successfully, otherwise returns `false` |
+| BigInteger | Current quantity of the product |
 ##### Examples
 ```sql
-page 50000 "My Product Page"
-{
-
-    Caption = 'My Product Page';
-    PageType = List;
-    SourceTable = "My Account Product";
-
-    layout
-    {
-        area(content)
-        {
-            repeater(General)
-            {
-                field(ProductName; ProductName)
-                {
-                    Caption = 'Product Name';
-                    ApplicationArea = All;
-                    Editable = false;
-                }
-                field(ProductUnit; ProductUnit)
-                {
-                    Caption = 'Product Unit';
-                    ApplicationArea = All;
-                    Editable = false;
-                }
-                field(Quantity; Quantity)
-                {
-                    Caption = 'Quantity';
-                    ApplicationArea = All;
-
-                    trigger OnValidate()
-                    begin
-                        if SetQuantity(Quantity) then
-                            Message(MsgTxt_Lbl);
-                    end;
-                }
-            }
-        }
-    }
-
-    [NonDebuggable]
-    procedure SetQuantity(Qty: BigInteger): Boolean
-    var
-        SecretProvider: Codeunit "App Key Vault Secret Provider";
-        SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
-        SecretKey: Text;
-        ProductID: Text[100];
-    begin
-        if SecretProvider.TryInitializeFromCurrentApp() then
-            if SecretProvider.GetSecret('SecretKey', SecretKey) and
-               SecretProvider.GetSecret('MyAppProductID', ProductID)
-            then
-                exit(SubscriptionMgt.SetQuantity(SecretKey, ProductID, Qty));
-    end;
-
-    var
-        Quantity: BigInteger;
-        MsgTxt_Lbl: Label 'Quantity value is successfully updated'.
-}
+TBD
 ```
-#### SetQuantity(Text,Text[100],BigInteger,Boolean)
+### GetProductLines (Method)
+Returns the list of current quantity lines. 
+#### GetProductLines(Text,Text[100],var Dictionary)
 ![](https://img.shields.io/badge/version-Unreleased-blue)
 ```sql
 [NonDebuggable]
-SetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger;ResetBillingCycle:Boolean):Boolean
+GetProductLines(SecretKey:Text;ProductID:Text[100];var Lines:Dictionary)
 ```
 ##### Parameters
 | Name | Type | Description |
 | - | - | - |
 | SecretKey | Text | [Stripe Secret Key](#common-parameters) |
 | ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| Quantity | BigInteger | Quantity of the product |
+| Lines | Dictionary | TBD |
+##### Examples
+```sql
+TBD
+```
+#### GetProductLines(Text,Text[100],Enum,var Dictionary)
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+GetProductLines(SecretKey:Text;ProductID:Text[100];Scope:Enum;var Lines:Dictionary))
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| Scope | Enum | TBD |
+| Lines | Dictionary | TBD |
+##### Examples
+```sql
+TBD
+```
+### SetProductLines (Method)
+Updates the list of current quantity lines. 
+#### SetProductLines(Text,Text[100],Dictionary)
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+SetProductLines(SecretKey:Text;ProductID:Text[100];var Lines:Dictionary)
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| Lines | Dictionary | TBD |
+##### Examples
+```sql
+TBD
+```
+#### SetProductLines(Text,Text[100],Enum,Dictionary)
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+SetProductLines(SecretKey:Text;ProductID:Text[100];Scope:Enum;var Lines:Dictionary)
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| Scope | Enum | TBD |
+| Lines | Dictionary | TBD |
+##### Examples
+```sql
+TBD
+```
+#### SetProductLines(Text,Text[100],Boolean,Dictionary)
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+SetProductLines(SecretKey:Text;ProductID:Text[100];ResetBillingCycle:Boolean;var Lines:Dictionary)
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
 | ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to a next invoice date. |
-##### Returns
-| Type | Description |
-| - | - |
-| Boolean | `true` if the update process completed successfully, otherwise returns `false` |
+| Lines | Dictionary | TBD |
 ##### Examples
 ```sql
-page 50000 "My Product Page"
-{
-
-    Caption = 'My Product Page';
-    PageType = List;
-    SourceTable = "My Account Product";
-
-    layout
-    {
-        area(content)
-        {
-            repeater(General)
-            {
-                field(ProductName; ProductName)
-                {
-                    Caption = 'Product Name';
-                    ApplicationArea = All;
-                    Editable = false;
-                }
-                field(ProductUnit; ProductUnit)
-                {
-                    Caption = 'Product Unit';
-                    ApplicationArea = All;
-                    Editable = false;
-                }
-                field(ResetBillingCycle; ResetBillingCycle)
-                {
-                    Caption = 'Reset Billing Cycle';
-                    ApplicationArea = All;
-                }
-                field(Quantity; Quantity)
-                {
-                    Caption = 'Quantity';
-                    ApplicationArea = All;
-
-                    trigger OnValidate()
-                    begin
-                        if SetQuantity(Quantity, ResetBillingCycle) then
-                            Message(MsgTxt_Lbl);
-                    end;
-                }
-            }
-        }
-    }
-
-    [NonDebuggable]
-    procedure SetQuantity(Qty: BigInteger; ResetBillingCycle: Boolean): Boolean
-    var
-        SecretProvider: Codeunit "App Key Vault Secret Provider";
-        SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
-        SecretKey: Text;
-        ProductID: Text[100];
-    begin
-        if SecretProvider.TryInitializeFromCurrentApp() then
-            if SecretProvider.GetSecret('SecretKey', SecretKey) and
-               SecretProvider.GetSecret('MyAppProductID', ProductID)
-            then
-                exit(SubscriptionMgt.SetQuantity(SecretKey, ProductID, Qty, ResetBillingCycle));
-    end;
-
-    var
-        Quantity: BigInteger;
-        MsgTxt_Lbl: Label 'Quantity value is successfully updated.';
-}
+TBD
 ```
-#### SetQuantity(Text,Text[100],BigInteger,Boolean,Boolean)
+#### SetProductLines(Text,Text[100],Enum,Boolean,Dictionary)
 ![](https://img.shields.io/badge/version-Unreleased-blue)
 ```sql
 [NonDebuggable]
-SetQuantity(SecretKey:Text;ProductID:Text[100];Quantity:BigInteger;ResetBillingCycle:Boolean;ShowConfirmation:Boolean):Boolean
+SetProductLines(SecretKey:Text;ProductID:Text[100];Scope:Enum;ResetBillingCycle:Boolean;var Lines:Dictionary)
 ```
 ##### Parameters
 | Name | Type | Description |
 | - | - | - |
 | SecretKey | Text | [Stripe Secret Key](#common-parameters) |
 | ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| Quantity | BigInteger | Quantity of the product |
-| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to the next invoice date. |
-| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with upcoming invoice information and information about what the next payment will look like and asks the user to proceed. |
-##### Returns
-| Type | Description |
-| - | - |
-| Boolean | `true` if the update process completed with success, otherwise returns `false` |
+| Scope | Enum | TBD |
+| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to a next invoice date. |
+| Lines | Dictionary | TBD |
 ##### Examples
 ```sql
-page 50000 "My Product Page_SM_TSL"
-{
-
-    Caption = 'My Product Page';
-    PageType = List;
-    SourceTable = "My Account Product";
-
-    layout
-    {
-        area(content)
-        {
-            repeater(General)
-            {
-                field(ProductName; ProductName)
-                {
-                    Caption = 'Product Name';
-                    ApplicationArea = All;
-                    Editable = false;
-                }
-                field(ProductUnit; ProductUnit)
-                {
-                    Caption = 'Product Unit';
-                    ApplicationArea = All;
-                    Editable = false;
-                }
-                field(ResetBillingCycle; ResetBillingCycle)
-                {
-                    Caption = 'Reset Billing Cycle';
-                    ApplicationArea = All;
-                }
-                field(ShowConfirmation; ShowConfirmation)
-                {
-                    Caption = 'Show Confirmation';
-                    ApplicationArea = All;
-                }
-                field(Quantity; Quantity)
-                {
-                    Caption = 'Quantity';
-                    ApplicationArea = All;
-
-                    trigger OnValidate()
-                    begin
-                        if SetQuantity(Quantity, ResetBillingCycle, ShowConfirmation) then
-                            Message(MsgTxt_Lbl);
-                    end;
-                }
-            }
-        }
-    }
-
-    [NonDebuggable]
-    procedure SetQuantity(Qty: BigInteger; ResetBillingCycle: Boolean; ShowConfirmation: Boolean): Boolean
-    var
-        SecretProvider: Codeunit "App Key Vault Secret Provider";
-        SubscriptionMgt: Codeunit SubscriptionMgt_SM_TSL;
-        SecretKey: Text;
-        ProductID: Text[100];
-    begin
-        if SecretProvider.TryInitializeFromCurrentApp() then
-            if SecretProvider.GetSecret('SecretKey', SecretKey) and
-               SecretProvider.GetSecret('MyAppProductID', ProductID)
-            then
-                exit(SubscriptionMgt.SetQuantity(SecretKey, ProductID, Qty, ResetBillingCycle, ShowConfirmation));
-    end;
-
-    var
-        Quantity: BigInteger;
-        MsgTxt_Lbl: Label 'Quantity value is succesfully updated.';
-}
+TBD
+```
+#### SetProductLines(Text,Text[100],Dictionary,Boolean)
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+SetProductLines(SecretKey:Text;ProductID:Text[100];var Lines:Dictionary;ShowConfirmation:Boolean)
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| Lines | Dictionary | TBD |
+| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with upcoming invoice information and information about what the next payment will look like and asks the user to proceed. |
+##### Examples
+```sql
+TBD
+```
+#### SetProductLines(Text,Text[100],Enum,Dictionary,Boolean)
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+SetProductLines(SecretKey:Text;ProductID:Text[100];Scope:Enum;var Lines:Dictionary;ShowConfirmation:Boolean)
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| Scope | Enum | TBD |
+| Lines | Dictionary | TBD |
+| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with upcoming invoice information and information about what the next payment will look like and asks the user to proceed. |
+##### Examples
+```sql
+TBD
+```
+#### SetProductLines(Text,Text[100],Boolean,Dictionary,Boolean)
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+SetProductLines(SecretKey:Text;ProductID:Text[100];ResetBillingCycle:Boolean;var Lines:Dictionary;ShowConfirmation:Boolean)
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to a next invoice date. |
+| Lines | Dictionary | TBD |
+| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with upcoming invoice information and information about what the next payment will look like and asks the user to proceed. |
+##### Examples
+```sql
+TBD
+```
+#### SetProductLines(Text,Text[100],Enum,Boolean,Dictionary,Boolean)
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+SetProductLines(SecretKey:Text;ProductID:Text[100];Scope:Enum;ResetBillingCycle:Boolean;var Lines:Dictionary;ShowConfirmation:Boolean)
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| Scope | Enum | TBD |
+| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to a next invoice date. |
+| Lines | Dictionary | TBD |
+| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with upcoming invoice information and information about what the next payment will look like and asks the user to proceed. |
+##### Examples
+```sql
+TBD
 ```
 ### ShowNotification (Method)
 Force Subscription Management to show a notification to the user to act on the subscription. It will return false if there is nothing to show.
