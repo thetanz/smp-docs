@@ -1,0 +1,36 @@
+{
+  "description": "",
+  "type": "object",
+  "x-examples": {
+    "example-1": {
+      "environmentName": "asdasdsad",
+      "companyName": "asdasd"
+    }
+  },
+  "title": "",
+  "examples": [
+    {
+      "id": "MTYyLjQ3LjI2LjI3",
+      "environmentName": "Production",
+      "companyName": "CRONUS International Ltd.",
+      "terminalIP": "162.47.26.27"
+    }
+  ],
+  "x-internal": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "readOnly": true
+    },
+    "environmentName": {
+      "type": "string",
+      "minLength": 1,
+      "readOnly": true
+    },
+    "companyName": {
+      "type": "string",
+      "minLength": 1,
+      "readOnly": true
+    }
+  }
+}
