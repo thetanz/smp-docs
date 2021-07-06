@@ -1,0 +1,31 @@
+{
+  "type": "array",
+  "description": "",
+  "minItems": 1,
+  "uniqueItems": true,
+  "x-examples": {
+    "example-1": [
+      {
+        "key": "",
+        "value": {}
+      }
+    ]
+  },
+  "title": "",
+  "items": {
+    "$ref": "./ProductLineKeyValuePair.json"
+  },
+  "examples": [
+    [
+      {
+        "key": "VTJGc2RHVmtYMS9sYnFKd013QW82OVB4RmNBZHZXcmZwZ1NLcTF4OTNrM2lQMEcwUTBFdll4YzJOZjVUVitwUQprbE80MHl5c0ZWb1FQT1BZenZTQXB3PT0=,VTJGc2RHVmtYMTl5Zk9lUFk4b09lU2c5U29HK1RJUzdBeUJkRk83YWFxVlpxMHM1SHlMRzFvRk8xakozNzVFSgpwZVFkNDIvNklXMUNIN1g5dGtrUmVnPT0=,",
+        "value": {
+          "id": "MTYyLjQ3LjI2LjI3",
+          "environmentName": "Production",
+          "companyName": "CRONUS International Ltd.",
+          "terminalIP": "162.47.26.27"
+        }
+      }
+    ]
+  ]
+}

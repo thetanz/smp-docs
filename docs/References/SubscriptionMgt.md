@@ -284,224 +284,6 @@ GetPriceName(SecretKey:Text;ProductID:Text[100]):Text
 ```sql
 TBD
 ```
-### CountProductLines (Method)
-Returns the current quantity of the specified product. Default return value is `1` if the quantity could not be found.
-#### CountProductLines(Text,Text[100])
-![](https://img.shields.io/badge/version-Unreleased-blue)
-```sql
-[NonDebuggable]
-CountProductLines(SecretKey:Text;ProductID:Text[100]):BigInteger
-```
-##### Parameters
-| Name | Type | Description |
-| - | - | - |
-| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
-| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-##### Returns
-| Type | Description |
-| - | - |
-| BigInteger | Current quantity of the product |
-##### Examples
-```sql
-TBD
-```
-#### CountProductLines(Text,Text[100],Enum)
-![](https://img.shields.io/badge/version-Unreleased-blue)
-```sql
-[NonDebuggable]
-CountProductLines(SecretKey:Text;ProductID:Text[100];Scope:Enum):BigInteger
-```
-##### Parameters
-| Name | Type | Description |
-| - | - | - |
-| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
-| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| Scope | Enum | TBD |
-##### Returns
-| Type | Description |
-| - | - |
-| BigInteger | Current quantity of the product |
-##### Examples
-```sql
-TBD
-```
-### GetProductLines (Method)
-Returns the list of current quantity lines. 
-#### GetProductLines(Text,Text[100],var Dictionary)
-![](https://img.shields.io/badge/version-Unreleased-blue)
-```sql
-[NonDebuggable]
-GetProductLines(SecretKey:Text;ProductID:Text[100];var Lines:Dictionary)
-```
-##### Parameters
-| Name | Type | Description |
-| - | - | - |
-| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
-| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| Lines | Dictionary | TBD |
-##### Examples
-```sql
-TBD
-```
-#### GetProductLines(Text,Text[100],Enum,var Dictionary)
-![](https://img.shields.io/badge/version-Unreleased-blue)
-```sql
-[NonDebuggable]
-GetProductLines(SecretKey:Text;ProductID:Text[100];Scope:Enum;var Lines:Dictionary))
-```
-##### Parameters
-| Name | Type | Description |
-| - | - | - |
-| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
-| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| Scope | Enum | TBD |
-| Lines | Dictionary | TBD |
-##### Examples
-```sql
-TBD
-```
-### SetProductLines (Method)
-Updates the list of current quantity lines. 
-#### SetProductLines(Text,Text[100],Dictionary)
-![](https://img.shields.io/badge/version-Unreleased-blue)
-```sql
-[NonDebuggable]
-SetProductLines(SecretKey:Text;ProductID:Text[100];var Lines:Dictionary)
-```
-##### Parameters
-| Name | Type | Description |
-| - | - | - |
-| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
-| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| Lines | Dictionary | TBD |
-##### Examples
-```sql
-TBD
-```
-#### SetProductLines(Text,Text[100],Enum,Dictionary)
-![](https://img.shields.io/badge/version-Unreleased-blue)
-```sql
-[NonDebuggable]
-SetProductLines(SecretKey:Text;ProductID:Text[100];Scope:Enum;var Lines:Dictionary)
-```
-##### Parameters
-| Name | Type | Description |
-| - | - | - |
-| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
-| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| Scope | Enum | TBD |
-| Lines | Dictionary | TBD |
-##### Examples
-```sql
-TBD
-```
-#### SetProductLines(Text,Text[100],Boolean,Dictionary)
-![](https://img.shields.io/badge/version-Unreleased-blue)
-```sql
-[NonDebuggable]
-SetProductLines(SecretKey:Text;ProductID:Text[100];ResetBillingCycle:Boolean;var Lines:Dictionary)
-```
-##### Parameters
-| Name | Type | Description |
-| - | - | - |
-| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
-| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to a next invoice date. |
-| Lines | Dictionary | TBD |
-##### Examples
-```sql
-TBD
-```
-#### SetProductLines(Text,Text[100],Enum,Boolean,Dictionary)
-![](https://img.shields.io/badge/version-Unreleased-blue)
-```sql
-[NonDebuggable]
-SetProductLines(SecretKey:Text;ProductID:Text[100];Scope:Enum;ResetBillingCycle:Boolean;var Lines:Dictionary)
-```
-##### Parameters
-| Name | Type | Description |
-| - | - | - |
-| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
-| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| Scope | Enum | TBD |
-| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to a next invoice date. |
-| Lines | Dictionary | TBD |
-##### Examples
-```sql
-TBD
-```
-#### SetProductLines(Text,Text[100],Dictionary,Boolean)
-![](https://img.shields.io/badge/version-Unreleased-blue)
-```sql
-[NonDebuggable]
-SetProductLines(SecretKey:Text;ProductID:Text[100];var Lines:Dictionary;ShowConfirmation:Boolean)
-```
-##### Parameters
-| Name | Type | Description |
-| - | - | - |
-| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
-| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| Lines | Dictionary | TBD |
-| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with upcoming invoice information and information about what the next payment will look like and asks the user to proceed. |
-##### Examples
-```sql
-TBD
-```
-#### SetProductLines(Text,Text[100],Enum,Dictionary,Boolean)
-![](https://img.shields.io/badge/version-Unreleased-blue)
-```sql
-[NonDebuggable]
-SetProductLines(SecretKey:Text;ProductID:Text[100];Scope:Enum;var Lines:Dictionary;ShowConfirmation:Boolean)
-```
-##### Parameters
-| Name | Type | Description |
-| - | - | - |
-| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
-| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| Scope | Enum | TBD |
-| Lines | Dictionary | TBD |
-| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with upcoming invoice information and information about what the next payment will look like and asks the user to proceed. |
-##### Examples
-```sql
-TBD
-```
-#### SetProductLines(Text,Text[100],Boolean,Dictionary,Boolean)
-![](https://img.shields.io/badge/version-Unreleased-blue)
-```sql
-[NonDebuggable]
-SetProductLines(SecretKey:Text;ProductID:Text[100];ResetBillingCycle:Boolean;var Lines:Dictionary;ShowConfirmation:Boolean)
-```
-##### Parameters
-| Name | Type | Description |
-| - | - | - |
-| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
-| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to a next invoice date. |
-| Lines | Dictionary | TBD |
-| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with upcoming invoice information and information about what the next payment will look like and asks the user to proceed. |
-##### Examples
-```sql
-TBD
-```
-#### SetProductLines(Text,Text[100],Enum,Boolean,Dictionary,Boolean)
-![](https://img.shields.io/badge/version-Unreleased-blue)
-```sql
-[NonDebuggable]
-SetProductLines(SecretKey:Text;ProductID:Text[100];Scope:Enum;ResetBillingCycle:Boolean;var Lines:Dictionary;ShowConfirmation:Boolean)
-```
-##### Parameters
-| Name | Type | Description |
-| - | - | - |
-| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
-| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
-| Scope | Enum | TBD |
-| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to a next invoice date. |
-| Lines | Dictionary | TBD |
-| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with upcoming invoice information and information about what the next payment will look like and asks the user to proceed. |
-##### Examples
-```sql
-TBD
-```
 ### ShowNotification (Method)
 Force Subscription Management to show a notification to the user to act on the subscription. It will return false if there is nothing to show.
 #### ShowNotification(Text,Text[100])
@@ -546,6 +328,116 @@ pageextension 50000 MyExtension extends "Customer Card"
                   SubscriptionMgt.ShowNotification(SecretKey, ProductID);
     end;
 }
+```
+## Quantity API
+### CountProductLines (Method)
+Returns the current quantity of the specified product. Default return value is `1` if the quantity could not be found.
+#### CountProductLines(Text,Text[100])
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+CountProductLines(SecretKey:Text;ProductID:Text[100]):BigInteger
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+##### Returns
+| Type | Description |
+| - | - |
+| BigInteger | Current quantity of the product |
+##### Examples
+```sql
+TBD
+```
+### GetProductLines (Method)
+Returns the list of current quantity lines.
+#### GetProductLines(Text,Text[100],Dictionary of [Text,JsonObject])
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+GetProductLines(SecretKey:Text;ProductID:Text[100];var ProductLines:Dictionary of [Text, JsonObject]): Boolean
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| ProductLines | Dictionary of \[Text, JsonObject\] | TBD |
+##### Examples
+```sql
+TBD
+```
+### SetProductLines (Method)
+Updates the list of current quantity lines. 
+#### SetProductLines(Text,Text[100],Dictionary of [Text,JsonObject])
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+SetProductLines(SecretKey:Text;ProductID:Text[100];var ProductLines:Dictionary of [Text, JsonObject])
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| ProductLines | Dictionary of \[Text, JsonObject\] | TBD |
+##### Examples
+```sql
+TBD
+```
+#### SetProductLines(Text,Text[100],Boolean,Dictionary of [Text,JsonObject])
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+SetProductLines(SecretKey:Text;ProductID:Text[100];ResetBillingCycle:Boolean;var ProductLines:Dictionary of [Text, JsonObject])
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to a next invoice date. |
+| ProductLines | Dictionary of \[Text, JsonObject\] | |
+##### Examples
+```sql
+TBD
+```
+#### SetProductLines(Text,Text[100],Dictionary of [Text,JsonObject],Boolean)
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+SetProductLines(SecretKey:Text;ProductID:Text[100];var ProductLines:Dictionary of [Text, JsonObject];ShowConfirmation:Boolean)
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| ProductLines | Dictionary of \[Text, JsonObject\] | TBD |
+| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with upcoming invoice information and information about what the next payment will look like and asks the user to proceed. |
+##### Examples
+```sql
+TBD
+```
+#### SetProductLines(Text,Text[100],Boolean,Dictionary of [Text,JsonObject],Boolean)
+![](https://img.shields.io/badge/version-Unreleased-blue)
+```sql
+[NonDebuggable]
+SetProductLines(SecretKey:Text;ProductID:Text[100];ResetBillingCycle:Boolean;var ProductLines:Dictionary of [Text, JsonObject];ShowConfirmation:Boolean)
+```
+##### Parameters
+| Name | Type | Description |
+| - | - | - |
+| SecretKey | Text | [Stripe Secret Key](#common-parameters) |
+| ProductID | Text\[100\] | [Stripe Product ID](#common-parameters) |
+| ResetBillingCycle | Boolean | if `true`, it resets the subscription’s billing cycle anchor to the current time. If `false`, the quantity changes will be applied to a next invoice date. |
+| ProductLines | Dictionary of \[Text, JsonObject\] | TBD |
+| ShowConfirmation | Boolean | If `true`, the confirmation dialog pops up with upcoming invoice information and information about what the next payment will look like and asks the user to proceed. |
+##### Examples
+```sql
+TBD
 ```
 ## Mocking API
 ### RequestMocking (Method)
