@@ -13,8 +13,7 @@ incorporate into the unit test.
 In short, mocking is creating objects that simulate the behaviour of real
 objects.
 
-![Subscription Management Mocking
-Explanation](../../assets/images//3e5465a73ddbfdbad42facca42cf3642.png)
+![Subscription Management Mocking Explanation](../../assets/images//3e5465a73ddbfdbad42facca42cf3642.png)
 
 Classes are not isolated as they are using services and methods from other
 classes, but in unit testing, we want to test methods of one class in isolation.
