@@ -75,7 +75,7 @@ Option 2 is for recurring purchases of your product
 
 ![](../../assets/images/5e059e10b895169df50f1ca5e79899e1.png)
 
-You can select the billing period you want, and also choose whether to meter the
+You can select the billing period you want, and choose to meter the
 usage.
 
 ![](../../assets/images/907a2104ba010837b0c513fda5d07192.png)
@@ -97,8 +97,7 @@ pricing at the final price breakpoint.
 
 ![](../../assets/images/4fe2422521ed4f389ed1b278885d2128.png)
 
-As per Standard pricing, the billing period can be selected, and also metering
-of the product usage.
+As per Standard pricing, the billing period can be selected, and product usage metered.
 
 ### Package Pricing
 
@@ -111,8 +110,7 @@ Option 2 is for recurring purchases of your product
 
 ![](../../assets/images/6527eb113932e234da6742fdf38cb686.png)
 
-As per Standard pricing, the billing period can be selected, and also metering
-of the product usage.
+As per Standard pricing, the billing period can be selected, and product usage metered.
 
 ### Graduated Pricing
 
