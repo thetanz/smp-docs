@@ -12,10 +12,10 @@ on how to configure and combine the pricing you want.
 
 ## Pricing Models
 
-When you are planning the product subscription and depending on
-how you want to price each product unit, you can choose between several pricing
-models. The pricing models available are **Standard**, **Volume**, **Package**,
-and **Graduated**.
+When you are planning the product subscription and depending on how you want to
+price each product unit, you can choose between several pricing models. The
+pricing models available are **Standard**, **Volume**, **Package**, and
+**Graduated**.
 
 Here is a comparison of each pricing model:
 
@@ -57,10 +57,10 @@ select the “**Usage is metered**” checkbox control.
 Making this selection then opens a “**Charge for metered usage by**” dropdown
 control, where you can select the option that best suits your billing strategy.
 
-![](../../assets/images/086f6b3e60b869e1b8e771bb6b1849a0.png)
+![Graphical user interface, text, application Description automatically
+generated](../../assets/images/086f6b3e60b869e1b8e771bb6b1849a0.png)
 
-<!-- theme: warning -->
->A product has usage categorized as Licensed by default until the
+Important. A product has usage categorized as Licensed by default until the
 “**Usage is metered**” checkbox control is selected, then the usage changes to
 Metered.
 
@@ -81,12 +81,11 @@ Option 2 is for recurring purchases of your product
 
 ![](../../assets/images/5e059e10b895169df50f1ca5e79899e1.png)
 
-You can select the billing period you want, and also choose to meter the usage.
+You can select the billing period you want, and choose to meter the usage.
 
 ![](../../assets/images/907a2104ba010837b0c513fda5d07192.png)
 
-<!-- theme: info -->
->Metered billing lets you charge customers based on reported usage at
+Remember: metered billing lets you charge customers based on reported usage at
 the end of each billing period.
 
 ### Volume Pricing
@@ -103,8 +102,8 @@ pricing at the final price breakpoint.
 
 ![](../../assets/images/34cbdf708b9acc3a35612c9693ecf492.png)
 
-As per standard pricing, the billing period can be selected, and also metering
-of the product usage.
+As per standard pricing, the billing period can be selected, and product usage
+metered.
 
 ### Package Pricing
 
@@ -112,8 +111,8 @@ In the same way as standard pricing, there are two methods of configuring the
 **package** pricing model. Option 1 is for a one-time purchase of your product,
 and Option 2 is for recurring purchases of your product
 
-As per standard pricing, the billing period can be selected, and also metering
-of the product usage.
+As per standard pricing, the billing period can be selected, and product usage
+metered.
 
 ### Graduated Pricing
 
