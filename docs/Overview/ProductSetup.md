@@ -153,3 +153,5 @@ Products page of your dashboard and selecting the controls:
 2.  **…** (the ellipses to open a sub-menu)
 
 ![](../../assets/images/b3cb0cd711fb9fb4c413f3d41a7c18cb.png)
+
+
