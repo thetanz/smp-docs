@@ -13,9 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - SubscriptionMgt: GetQuantity to CountProductLines
 ### Fixed
 - Notification for pastDue status [#21](https://github.com/thetanz/smp-docs/issues/21)
-- Cannot finish with payment method exists [#22](https://github.com/thetanz/smp-docs/issues/22)
 - System refresh trial with second product subscription created [#23](https://github.com/thetanz/smp-docs/issues/23)
 - Clear Accountdata when Parent App is uninstalled
+## [1.2.0.0] `(2021-09-13)`
+### Added
+- New SETUP and VIEW permission sets
+### Fixed
+- Cannot finish with payment method exists [#22](https://github.com/thetanz/smp-docs/issues/22)
 ## [1.1.1.0] `(2021-05-13)`
 ### Added
 - Connect: Platform connected version allows self-onboarding for publishers
