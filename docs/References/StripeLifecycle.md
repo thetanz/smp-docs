@@ -1,3 +1,6 @@
+---
+sidebar_position: 3
+---
 # Stripe Lifecycle
 
 ## Subscription
@@ -10,7 +13,3 @@ incomplete | Payment failed when the subscription was created. A successful paym
 incomplete_expired | The initial payment on the subscription failed and no successful payment was made within 23 hours of creating the subscription. These subscriptions do not bill customers. This status exists so you can track customers that failed to activate their subscriptions. | Notify the customer, collect new payment information and create a new payment method, attach the payment method to the customer, update the default payment method, pay the invoice using the new payment method. | Subscription Management will continue to respond as active. Notification will be raised to inform the user to update the payment method to complete the payment and make the subscription active. The customer cannot change the plan.
 cancelled | The subscription has been cancelled. During cancellation automatic collection for all unpaid invoices is disabled (auto_advance=false). | | | 
 unpaid | The latest invoice hasn’t been paid but the subscription remains in place. The latest invoice remains open and invoices continue to be generated but payments aren’t attempted. | | | 
-
-## See Also
-- [SubscriptionMgt_SM_TSL Reference](SubscriptionMgt.md)
-- [Stripe Schema](StripeSchema.md)

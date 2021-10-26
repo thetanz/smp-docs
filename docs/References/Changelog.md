@@ -1,3 +1,6 @@
+---
+sidebar_position: 5
+---
 # Changelog
 All notable changes to this project will be documented in this file.
 <!-- theme: info -->
@@ -66,8 +69,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - SubscriptionMgt: GetCurrentPlanName to GetPriceName
 - SubscriptionMgt: ShowProductNotification to ShowNotification
 - SubscriptionMgt: Parameter: SetMock(...,ProductPlanName) to SetMock(...,PriceName)
-
-## See Also
-- [Getting Started](../GettingStarted.md)
-- [Security & Privacy](../Overview/Security&Privacy.md)
-- [Contribution](../Contributing.md)

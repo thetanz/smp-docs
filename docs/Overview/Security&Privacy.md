@@ -1,3 +1,6 @@
+---
+sidebar_position: 2
+---
 # Security & Privacy
 Subscription Management takes on the responsibility of connecting your application with your end-users. We've taken a number of steps to ensure the confidentiality of your data whilst it's entrusted with us.
 
@@ -27,7 +30,3 @@ Category | Description | Entered | Stored | Used
 **Customer's Billing Info** | Customer's billing address, email and payment method | By user using Subscription Management Assisted Setup and Stripe Elements only for paid subscribers | Private within Publisher's Stripe Account | By Stripe to billing purposes
 
 Please check a complete [Terms and Conditions](https://www.theta.co.nz/media/3805/terms-and-conditions-for-appsource-apps-for-business-central.pdf) and [Privacy Policy](https://www.theta.co.nz/contact-us/privacy-policy/) for a more details.
-
-## See Also
-- [Getting Started](../GettingStarted.md)
-- [FAQ](../FAQ.md)

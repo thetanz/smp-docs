@@ -1,3 +1,7 @@
+---
+sidebar_label: "Product & Prices"
+sidebar_position: 1
+---
 # Product Setup
 ## Licensed and Metered Usage
 
@@ -22,13 +26,13 @@ broadband provider charges 0.50 USD per gigabyte (GB) used, and a customer uses
 When you create a new product, licensed usage is applied by default unless you
 select the “**Usage is metered**” checkbox control.
 
-![](../../assets/images/9871628bd51fc5dce267c2f08e33079c.png)
+![](./../images/9871628bd51fc5dce267c2f08e33079c.png)
 
 
 Making this selection then opens a “**Charge for metered usage by**” dropdown
 control, where you can select the option that best suits your billing strategy.
 
-![](../../assets/images/086f6b3e60b869e1b8e771bb6b1849a0.png)
+![](./../images/086f6b3e60b869e1b8e771bb6b1849a0.png)
 
 <!-- theme: warning -->
 >Important. A product has usage categorized as Licensed by default until the
@@ -69,16 +73,16 @@ There are two methods of configuring the standard pricing model. Option 1 is for
 a one time purchase of your
 product.
 
-![](../../assets/images/2502b6d534c72dbb602629d334d98de0.png)
+![](./../images/2502b6d534c72dbb602629d334d98de0.png)
 
 Option 2 is for recurring purchases of your product
 
-![](../../assets/images/5e059e10b895169df50f1ca5e79899e1.png)
+![](./../images/5e059e10b895169df50f1ca5e79899e1.png)
 
 You can select the billing period you want, and choose to meter the
 usage.
 
-![](../../assets/images/907a2104ba010837b0c513fda5d07192.png)
+![](./../images/907a2104ba010837b0c513fda5d07192.png)
 
 <!-- theme: warning -->
 >Remember: metered billing lets you charge customers based on reported usage at
@@ -95,7 +99,7 @@ Additional tiers can be added by using the **Add another tier** control.
 Hovering over the **Preview** control shows how your selections will impact the
 pricing at the final price breakpoint.
 
-![](../../assets/images/4fe2422521ed4f389ed1b278885d2128.png)
+![](./../images/4fe2422521ed4f389ed1b278885d2128.png)
 
 As per Standard pricing, the billing period can be selected, and product usage metered.
 
@@ -104,11 +108,11 @@ As per Standard pricing, the billing period can be selected, and product usage m
 There are two methods of configuring the package pricing model. Option 1 is for
 a one time purchase of your product.      
 
-![](../../assets/images/80d036e1088147beba80fe9f5b5d4ca0.png)
+![](./../images/80d036e1088147beba80fe9f5b5d4ca0.png)
 
 Option 2 is for recurring purchases of your product
 
-![](../../assets/images/6527eb113932e234da6742fdf38cb686.png)
+![](./../images/6527eb113932e234da6742fdf38cb686.png)
 
 As per Standard pricing, the billing period can be selected, and product usage metered.
 
@@ -123,7 +127,7 @@ Additional tiers can be added by using the **Add another tier** control.
 Hovering over the **Preview** control shows how your selections will impact the
 pricing at the final price breakpoint.
 
-![](../../assets/images/3bb32b067ad376c4187d1419f04696de.png)
+![](./../images/3bb32b067ad376c4187d1419f04696de.png)
 
 ## One Product - Multiple Pricing Models, Billing Periods, & Currencies
 
@@ -138,7 +142,7 @@ In this example, there is:
 
 3.  a price per unit per week in EUR
 
-![](../../assets/images/1249ea853ffcf2193de4a4d3c7bf6e0a.png)
+![](./../images/1249ea853ffcf2193de4a4d3c7bf6e0a.png)
 
 There is no limit to the multiples that can be added to one product, and you can
 also add or edit the multiples later by accessing the product record and
@@ -148,4 +152,4 @@ selecting the controls:
 
 2.  **…** (ellipses to open a sub-menu)
 
-![](../../assets/images/f62a01ef0bae9aa5e7b44d35f1b03d03.png)
+![](./../images/f62a01ef0bae9aa5e7b44d35f1b03d03.png)

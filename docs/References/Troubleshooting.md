@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 # Troubleshooting
 ## OAuth Errors
 ### Need admin approval: Subscription Management needs permission to access resources in your organization that only an admin can grant.

@@ -1,3 +1,6 @@
+---
+sidebar_position: 3
+---
 # Contributing
 <!-- theme: success -->
 > ## Welcome contributors
@@ -11,7 +14,3 @@ Check out our [roadmap](https://github.com/thetanz/smp-docs/projects/1?fullscree
 
 ## Found a security issue?
 Please [contact our security team through email](https://github.com/thetanz/smp-docs/security/policy) or another form of contact as defined within our [security.txt file](https://www.theta.co.nz/.well-known/security.txt)
-
-## See Also
-- [Getting Started](GettingStarted.md)
-- [Security & Privacy](Overview/Security&Privacy.md)

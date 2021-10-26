@@ -1,7 +1,9 @@
+---
+sidebar_position: 5
+---
 # FAQ
-
 ## How to start using Subscription Management? 
-Subscription Management is a separate extension which you use as a dependency app for each extension you would like to monetize. During the publisher onboarding process, we will provide a development version to set up your integration. When the integration is defined, we will provide an AppSource version dependency reference that needs to be used for your AppSource publication. [More info](./GettingStarted.md).
+Subscription Management is a separate extension which you use as a dependency app for each extension you would like to monetize. During the publisher onboarding process, we will provide a development version to set up your integration. When the integration is defined, we will provide an AppSource version dependency reference that needs to be used for your AppSource publication.
 ## Which versions of Dynamics NAV/Business Central are supported by Subscription Management? 
 Version 15 is currently the lowest supported version. There are no plans to support any lower version. 
 ## How to enable sales through partners? 
@@ -17,7 +19,3 @@ There are three types of information collected:
 Subscription Management regularly synchronizes the customer’s subscription status with Stripe. Your app will be able to get this status through the API, which you can use to block users access if desired. 
 ## Is it possible to use Subscription Management for on-premise installations? 
 Yes, Subscription Management is available in any environment with Internet connectivity.
-
-## See Also
-- [Getting Started](GettingStarted.md)
-- [Security & Privacy](Overview/Security&Privacy.md)
