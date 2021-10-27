@@ -13,7 +13,7 @@ sidebar_position: 1
 - **Secure customer authentication** using single sign-on (SAML2 based SSO).
 - A **simple API** allows you to integrate your app with a few lines of code. 
 - A **single account** for all your apps **across any environment**.
-- Build-in **customer support** through email (and chat in development).
+- Build-in **customer support** through email.
 - **Translated by native speakers** into English, Dutch, French, German and Czech.
 - Works securely in **SaaS and On-Prem** (>=15.0)
 
