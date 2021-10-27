@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 7
 ---
 # Changelog
 All notable changes to this project will be documented in this file.

@@ -1,3 +1,6 @@
+---
+sidebar_position: 2
+---
 # Getting Started
 This guide shows how easy it is to get started with Subscription Management. Follow all the steps or jump to where you are in the process.
 ## 1. Connect your Stripe Account
