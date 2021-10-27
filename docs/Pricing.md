@@ -6,13 +6,17 @@ sidebar_position: 3
 
 | | Subscription Mgt. | Stripe |
 |-|-|-|
-| | <img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img" /> | <img src="https://s21.postimg.cc/tpm0cge4n/space-ship.png" alt="" class="pricing-img" /> |
 Transaction fees | **7%** | **3.4%+30¢** ([region specific](https://stripe.com/pricing))
 Both fees will be automatically applied to a transaction amount as the transaction happens. There are no fees if you need to refund a payment, but the fees on the original payment will not be returned in case of a refund.
 ## Volume Discount
 We support our publishers with a volume-based discount program. Publishers that show a significant sale over a year will receive a discount for the platform fee for the next full year as defined in the table below.
 
 <table>
+  <tr>
+    <td></td>
+    <td><img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img" /></td>
+    <td><img src="https://s21.postimg.cc/tpm0cge4n/space-ship.png" alt="" class="pricing-img" /></td>
+  </tr>
   <tr>
     <td>Sales (USD)</td>
     <td>> 100,000 USD</td>

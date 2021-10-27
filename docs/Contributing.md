@@ -2,10 +2,10 @@
 sidebar_position: 6
 ---
 # Contributing
-<!-- theme: success -->
-> ## Welcome contributors
-> 👍 First off, **THANK YOU** for taking the time to contribute! Only in collaboration with our dear publishers will Subscription Management become a greater app for all of us.
- 
+:::tip
+## Welcome contributors
+👍 First off, **THANK YOU** for taking the time to contribute! Only in collaboration with our dear publishers will Subscription Management become a greater app for all of us.
+:::
 ## Did you find a bug?
 Please [log a bug](https://github.com/thetanz/smp-docs/issues/new?assignees=vody&labels=bug&template=bug_report.md&title=) and insure to include as much relevant information as possible. You may include a code sample or an executable test case demonstrating the expected behaviour that is not occurring.
 

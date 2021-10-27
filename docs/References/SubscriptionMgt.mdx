@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 # SubscriptionMgt_SM_TSL (Codeunit)
 SubscriptionMgt_SM_TSL codeunit contains all the code blocks for the integration aspect of the Subscription Management app. It comprises multiple functions as described below. 
 Before progressing, please ensure that the Subscription Management extension is installed into your development environment and the right dependency has been defined in your extension's `app.json`: 
-```json
+```json title=dependencies
 {
     "id": "6717135a-d80c-4a63-8a3a-5ded6717135a",
     "publisher": "Theta Systems Limited",
@@ -32,11 +32,7 @@ Requests Subscription Management to start handling your extension. It's recommen
 ![](https://img.shields.io/badge/version-1.0.0.0+-success)
 
 ```sql
-TryAddProduct(
-    SecretKey,
-    PublishableKey,
-    Info,
-    ProductID)
+TryAddProduct(SecretKey,PublishableKey,Info,ProductID)
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -77,11 +73,13 @@ codeunit 50000 InstallExt
                    SecretProvider.GetSecret('PublishableKey', PublishableKey) and
                    SecretProvider.GetSecret('MyAppProductID', ProductID)
                 then
+                    // highlight-start
                     SubscriptionMgt.TryAddProduct(
                         SecretKey,
                         PublishableKey,
                         Info,
                         ProductID);
+                    // highlight-end
     end;
 }
 ```
@@ -110,11 +108,13 @@ codeunit 50001 UpgradeExt
                    SecretProvider.GetSecret('PublishableKey', PublishableKey) and
                    SecretProvider.GetSecret('MyAppProductID', ProductID)
                 then
+                    // highlight-start
                     SubscriptionMgt.TryAddProduct(
                         SecretKey,
                         PublishableKey,
                         Info,
                         ProductID);
+                    // highlight-end
     end;
 }
 ```
@@ -127,11 +127,7 @@ codeunit 50001 UpgradeExt
 ![](https://img.shields.io/badge/version-1.0.0.0+-success)
 
 ```sql
-TryAddProduct(
-    SecretKey,
-    PublishableKey,
-    AppID,
-    ProductID)
+TryAddProduct(SecretKey,PublishableKey,AppID,ProductID)
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -172,11 +168,13 @@ codeunit 50000 InstallExt
                    SecretProvider.GetSecret('PublishableKey', PublishableKey) and
                    SecretProvider.GetSecret('MyAppProductID', ProductID)
                 then
+                    // highlight-start
                     SubscriptionMgt.TryAddProduct(
                         SecretKey,
                         PublishableKey,
                         Info.Id(),
                         ProductID);
+                    // highlight-end
     end;
 }
 ```
@@ -205,11 +203,13 @@ codeunit 50001 UpgradeExt
                    SecretProvider.GetSecret('PublishableKey', PublishableKey) and
                    SecretProvider.GetSecret('MyAppProductID', ProductID)
                 then
+                    // highlight-start
                     SubscriptionMgt.TryAddProduct(
                         SecretKey,
                         PublishableKey,
                         Info.Id(),
                         ProductID);
+                    // highlight-end
     end;
 }
 ```
@@ -224,9 +224,7 @@ Checks whether the product subscription is in one of the active states (active, 
 ![](https://img.shields.io/badge/version-1.0.0.0+-success)
 
 ```sql
-IsActive(
-    SecretKey,
-    ProductID)
+IsActive(SecretKey,ProductID)
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -262,6 +260,7 @@ pageextension 50000 MyExtension extends "Customer Card"
             if SecretProvider.GetSecret('SecretKey', SecretKey) and
                SecretProvider.GetSecret('MyAppProductID', ProductID)
             then
+                // highlight-next-line
                 exit(SubscriptionMgt.IsActive(SecretKey, ProductID));
     end;
 }
@@ -275,9 +274,7 @@ Returns whether a subscription is currently under a trial period.
 ![](https://img.shields.io/badge/version-1.0.0.0+-success)
 
 ```sql
-IsTrialing(
-    SecretKey,
-    ProductID)
+IsTrialing(SecretKey,ProductID)
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -312,6 +309,7 @@ pageextension 50000 MyExtension extends "Customer Card"
             if SecretProvider.GetSecret('SecretKey', SecretKey) and
                SecretProvider.GetSecret('MyAppProductID', ProductID)
             then
+                // highlight-next-line
                 exit(SubscriptionMgt.IsTrialing(SecretKey, ProductID));
     end;
 }
@@ -322,15 +320,13 @@ pageextension 50000 MyExtension extends "Customer Card"
 ### GetPriceName (Method)
 Returns name of the user selected plan. Returns `''` if no plan is selected.
 #### GetPriceName(Text;Text[100]):Text
-<a href="../References/Changelog#1040-2020-12-13" class="badge-link"> 
+<a href="../Changelog#1040-2020-12-13" class="badge-link"> 
 
 ![](https://img.shields.io/badge/version-1.0.4.0+-success)
 </a>
 
 ```sql
-GetPriceName(
-    SecretKey,
-    ProductID)
+GetPriceName(SecretKey,ProductID)
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -344,15 +340,13 @@ GetPriceName(
 ### ShowNotification (Method)
 Force Subscription Management to show a notification to the user to act on the subscription. It will return false if there is nothing to show.
 #### ShowNotification(Text;Text[100]):Boolean
-<a href="../References/Changelog#1040-2020-12-13" class="badge-link"> 
+<a href="../Changelog#1040-2020-12-13" class="badge-link"> 
 
 ![](https://img.shields.io/badge/version-1.0.4.0+-success)
 </a>
 
 ```sql
-ShowNotification(
-    SecretKey,
-    ProductID)
+ShowNotification(SecretKey,ProductID)
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -390,6 +384,7 @@ pageextension 50000 MyExtension extends "Customer Card"
                 if SubscriptionMgt.IsActive(SecretKey, ProductID) then
                   exit(true)
                 else
+                  // highlight-next-line
                   SubscriptionMgt.ShowNotification(SecretKey, ProductID);
     end;
 }
@@ -401,15 +396,13 @@ pageextension 50000 MyExtension extends "Customer Card"
 ### CountProductLines (Method)
 Returns the current quantity of the specified product. Default return value is `1` if the quantity could not be found.
 #### CountProductLines(Text;Text[100]):BigInteger
-<a href="../References/Changelog#unreleased" class="badge-link"> 
+<a href="../Changelog#unreleased" class="badge-link"> 
 
 ![](https://img.shields.io/badge/version-unreleased-inactive)
 </a>
 
 ```sql
-CountProductLines(
-    SecretKey,
-    ProductID)
+CountProductLines(SecretKey,ProductID)
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -423,16 +416,13 @@ CountProductLines(
 ### GetProductLines (Method)
 Returns the list of current quantity lines.
 #### GetProductLines(Text;Text[100];var Dictionary of [Text,JsonObject]):Boolean
-<a href="../References/Changelog#unreleased" class="badge-link"> 
+<a href="../Changelog#unreleased" class="badge-link"> 
 
 ![](https://img.shields.io/badge/version-unreleased-inactive)
 </a>
 
 ```sql
-GetProductLines(
-    SecretKey,
-    ProductID,
-    ProductLines)
+GetProductLines(SecretKey,ProductID,ProductLines)
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -447,16 +437,13 @@ GetProductLines(
 ### SetProductLines (Method)
 Updates the list of current quantity lines. 
 #### SetProductLines(Text;Text[100];Dictionary of [Text,JsonObject]):Boolean
-<a href="../References/Changelog#unreleased" class="badge-link"> 
+<a href="../Changelog#unreleased" class="badge-link"> 
 
 ![](https://img.shields.io/badge/version-unreleased-inactive)
 </a>
 
 ```sql
-SetProductLines(
-    SecretKey,
-    ProductID,
-    ProductLines)
+SetProductLines(SecretKey,ProductID,ProductLines)
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -469,17 +456,13 @@ SetProductLines(
 | - | - |
 | Boolean | Returns true if operation has been successful |
 #### SetProductLines(Text;Text[100];Boolean;Dictionary of [Text,JsonObject]):Boolean
-<a href="../References/Changelog#unreleased" class="badge-link"> 
+<a href="../Changelog#unreleased" class="badge-link"> 
 
 ![](https://img.shields.io/badge/version-unreleased-inactive)
 </a>
 
 ```sql
-SetProductLines(
-    SecretKey,
-    ProductID,
-    ResetBillingCycle,
-    ProductLines)
+SetProductLines(SecretKey,ProductID,ResetBillingCycle,ProductLines)
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -493,17 +476,13 @@ SetProductLines(
 | - | - |
 | Boolean | Returns true if operation has been successful |
 #### SetProductLines(Text;Text[100];Dictionary of [Text,JsonObject];Boolean):Boolean
-<a href="../References/Changelog#unreleased" class="badge-link"> 
+<a href="../Changelog#unreleased" class="badge-link"> 
 
 ![](https://img.shields.io/badge/version-unreleased-inactive)
 </a>
 
 ```sql
-SetProductLines(
-    SecretKey,
-    ProductID,
-    ProductLines,
-    ShowConfirmation)
+SetProductLines(SecretKey,ProductID,ProductLines,ShowConfirmation)
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -517,18 +496,13 @@ SetProductLines(
 | - | - |
 | Boolean | Returns true if operation has been successful |
 #### SetProductLines(Text;Text[100];Boolean;Dictionary of [Text,JsonObject];Boolean):Boolean
-<a href="../References/Changelog#unreleased" class="badge-link"> 
+<a href="../Changelog#unreleased" class="badge-link"> 
 
 ![](https://img.shields.io/badge/version-unreleased-inactive)
 </a>
 
 ```sql
-SetProductLines(
-    SecretKey,
-    ProductID,
-    ResetBillingCycle,
-    ProductLines,
-    ShowConfirmation)
+SetProductLines(SecretKey,ProductID,ResetBillingCycle,ProductLines,ShowConfirmation)
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -546,7 +520,7 @@ SetProductLines(
 ### RequestMocking (Method)
 Request service mocking by key provided.
 #### RequestMocking(Text)
-<a href="../References/Changelog#1040-2020-12-13" class="badge-link"> 
+<a href="../Changelog#1040-2020-12-13" class="badge-link"> 
 
 ![](https://img.shields.io/badge/version-1.0.4.0+-success)
 </a>
@@ -578,6 +552,7 @@ codeunit 50002 "MyExtensionTest"
         // [Given] my extension is installed and subscription is active
         SecretProvider.TryInitializeFromCurrentApp();
         SecretProvider.GetSecret('MockAuthKey', MockAuthKey);
+        // highlight-next-line
         SubscriptionMgt.RequestMocking(MockAuthKey);
         SubscriptionMgt.SetMock(false, true, 'Business');
         // [When] user opens a customer card 
@@ -593,16 +568,13 @@ codeunit 50002 "MyExtensionTest"
 ### SetMock (Method)
 Sets response which `SubscriptionMgt_SM_TSL` will reply during test execution.
 #### SetMock(Boolean;Boolean;Text)
-<a href="../References/Changelog#1040-2020-12-13" class="badge-link"> 
+<a href="../Changelog#1040-2020-12-13" class="badge-link"> 
 
 ![](https://img.shields.io/badge/version-1.0.4.0+-success)
 </a>
 
 ```sql
-SetMock(
-    IsTrialing,
-    IsActive,
-    PriceName)
+SetMock(IsTrialing,IsActive,PriceName)
 ```
 ##### Parameters
 | Name | Type | Description |
@@ -631,6 +603,7 @@ codeunit 50002 "MyExtensionTest"
         SecretProvider.TryInitializeFromCurrentApp();
         SecretProvider.GetSecret('MockAuthKey', MockAuthKey);
         SubscriptionMgt.RequestMocking(MockAuthKey);
+        // highlight-next-line
         SubscriptionMgt.SetMock(false, true, 'Business');
         // [When] user opens a customer card 
         ...
@@ -645,7 +618,7 @@ codeunit 50002 "MyExtensionTest"
 ### AuthorizeMocking (Method)
 Allows further calls to the service to be mocked using provided private key.
 #### AuthorizeMocking(Text)
-<a href="../References/Changelog#1040-2020-12-13" class="badge-link"> 
+<a href="../Changelog#1040-2020-12-13" class="badge-link"> 
 
 ![](https://img.shields.io/badge/version-1.0.4.0+-success)
 </a>
@@ -683,6 +656,7 @@ pageextension 50000 MyExtension extends "Customer Card"
                SecretProvider.GetSecret('MyAppProductID', ProductID) and
                SecretProvider.GetSecret('MockAuthKey', MockAuthKey)
             then begin
+                // highlight-next-line
                 SubscriptionMgt.AuthorizeMocking(MockAuthKey);
                 exit(SubscriptionMgt.IsActive(SecretKey, ProductID));
             end
