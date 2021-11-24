@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Notification for pastDue status [#21](https://github.com/thetanz/smp-docs/issues/21)
 - System refresh trial with second product subscription created [#23](https://github.com/thetanz/smp-docs/issues/23)
 - Clear Accountdata when Parent App is uninstalled
-## [1.3.0.0] `(2021-11-16)`
+## [1.3.1.0] `(2021-11-16)`
 ### Added
 - OAuth Fallback to "Tenant" Auth (Cloud-Only) [#17](https://github.com/thetanz/smp-docs/issues/17)
 ### Fixed
