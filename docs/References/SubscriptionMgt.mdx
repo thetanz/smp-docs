@@ -25,7 +25,7 @@ Before progressing, please ensure that the Subscription Management extension is 
 :::info
 _SecretKey_, _PublishableKey_ and _ProductID_ values differ across your Stripe account between your test and live modes. Use test values during development/testing and make sure you use your live key in your production-ready package. The easiest way to do this is by replacing the [keyVaultUrls](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-app-key-vault#specify-the-azure-key-vault-in-extensions) values within your continuous integration process.
 :::
-## Integration API
+## Integration API 
 ### TryAddProduct (Method)
 Requests Subscription Management to start handling your extension. It's recommended to call it with `OnInstallAppPerDatabase` and `OnUpgradePerDatabase` events.
 #### TryAddProduct(Text;Text;ModuleInfo;Text[100]):Boolean
