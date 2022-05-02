@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: Product & Prices
+hide_title: true
 ---
 # Product & Prices
 ## Licensed and Metered Usage
