@@ -1,7 +1,7 @@
 # Unique short code for the app. Preferable use your app suffix or id, but make sure it's unique (https://thetaco1nz.sharepoint.com/:x:/s/NAVteam/EbpN-0s2lgpLnFy-mN5em_8Bs0uuE8oyURt6kGcrgVFg3g?e=rg79fA).  
 code: SM
-# path to a directory containing the docs relevant to current folder
-path: './docs'
+# directory containing the documentation to publish
+docsDir: 'docs'
 # Name of the Markdown file which will be a start page for the docs (e.g. Introduction, Changelog, etc.)) 
 startPage: Introduction
 # uncomment to enable the product visible and installable for public
