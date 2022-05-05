@@ -1,0 +1,16 @@
+# Unique short code for the app. Use your app suffix or random, but make sure it's unique (https://thetaco1nz.sharepoint.com/:x:/s/NAVteam/EbpN-0s2lgpLnFy-mN5em_8Bs0uuE8oyURt6kGcrgVFg3g?e=rg79fA).  
+code: SM
+# path to a directory containing the docs relevant to current folder
+path: './docs'
+# Name of the Markdown file which will be a start page for the docs (e.g. Introduction, Changelog, etc.)) 
+startPage: Introduction
+# uncomment to enable the product visible and installable for public
+published:
+    # Published extension 'id' from 'app.json'
+    id: 6717135a-d80c-4a63-8a3a-5ded6717135a
+    # Readable name of the app
+    name: Subscription Management
+    # Brief description of the app package or key value it brings to the user
+    brief: Handling Monetization for Apps
+    # Source from where user can download the app. Options: 'MSAppSource', 'ThetaAppSource'
+    marketplace: MSAppSource
