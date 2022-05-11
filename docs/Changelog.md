@@ -1,5 +1,6 @@
+<!--Accepted fields: https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter -->
 ---
-sidebar_position: 7
+sidebar_position: 998
 ---
 # Changelog
 All notable changes to this project will be documented in this file.

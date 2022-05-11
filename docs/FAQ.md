@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 1000
 ---
 # FAQ
 ## How to start using Subscription Management? 
