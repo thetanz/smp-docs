@@ -3,5 +3,6 @@ Turnkey solution that provides secure monetization mechanism for your Business C
 - Offers flexible billing models
 - A seamless user sign-up process
 - Integrates with a few lines of code
+- Works securely in SaaS and On-Prem
 
 Designed by Theta and backed by Stripe, provides an automated solution to handle payments, manage your customers and subscriptions seamlessly.
