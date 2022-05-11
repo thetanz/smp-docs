@@ -1,7 +1,7 @@
-<!--Accepted fields: https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter -->
 ---
 sidebar_position: 999
 ---
+<!--Accepted fields: https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter -->
 ## Do you intend to add a new feature or change an existing one?
 Check out our [roadmap](https://github.com/thetanz/smp-docs/projects/1?fullscreen=true) as your idea may already be under development. If not, please [log a feature request](https://github.com/thetanz/smp-docs/issues/new?assignees=vody&labels=enhancement&template=feature_request.md&title=). Make sure you describe the desired scenarios in full preferably with the expected behaviour of the app.
 
