@@ -18,6 +18,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Notification for pastDue status [#21](https://github.com/thetanz/smp-docs/issues/21)
 - System refresh trial with second product subscription created [#23](https://github.com/thetanz/smp-docs/issues/23)
 - Clear Accountdata when Parent App is uninstalled
+## [1.3.7.0] `(2022-10-06)`
+### Fixed
+- Account Product permission error
 ## [1.3.6.0] `(2022-07-07)`
 ### Fixed
 - Select a product plan sorting [#30](https://github.com/thetanz/smp-docs/issues/30)
