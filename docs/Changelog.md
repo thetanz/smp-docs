@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - [Trial notifications with payment method defined](https://365extensions.canny.io/bc/p/trial-notifications-with-payment-method-defined)
 - German translation fixes
+- Language independent DateFormula for upcomming invoice handling 
 - Notification for pastDue status [#21](https://github.com/thetanz/smp-docs/issues/21)
 - System refresh trial with second product subscription created [#23](https://github.com/thetanz/smp-docs/issues/23)
 - Clear Accountdata when Parent App is uninstalled
