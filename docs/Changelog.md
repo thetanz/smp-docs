@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Clear Accountdata when Parent App is uninstalled
 ## 1.3.8.0 - `2022-12-23`
 ### Fixed
+- [Don't default Currency Code](https://feedback.365extensions.com/bc/p/dont-default-currency-code)
 - [Trial notifications with payment method defined](https://365extensions.canny.io/bc/p/trial-notifications-with-payment-method-defined)
 - German translation
 - Language independent DateFormula for upcomming invoice handling
