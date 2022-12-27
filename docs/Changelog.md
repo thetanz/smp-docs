@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Don't default Currency Code](https://feedback.365extensions.com/bc/p/dont-default-currency-code)
 - [Trial notifications with payment method defined](https://365extensions.canny.io/bc/p/trial-notifications-with-payment-method-defined)
 - German translation
-- Language independent DateFormula for upcomming invoice handling
+- Language independent DateFormula for upcoming invoice handling
 - [Subscription with failed payment won't retry on a new card](https://feedback.365extensions.com/bc/p/subscription-with-failed-payment-wont-retry-on-a-new-card)
 ## 1.3.7.0 - `2022-10-06`
 ### Fixed
