@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 1.3.9.0 - `2023-01-24`
 ### Changed
 - Dependency to Common 1.5.2.0
+### Fixed
+- [Trial expiers before Payment](https://feedback.365extensions.com/bc/p/trial-expiers-before-payment)
 ## 1.3.8.0 - `2022-12-23`
 ### Fixed
 - [Don't default Currency Code](https://feedback.365extensions.com/bc/p/dont-default-currency-code)
