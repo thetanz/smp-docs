@@ -1,3 +1,5 @@
+<img src="https://docs.365extensions.com/img/logo.svg" style="height: 6rem" />
+
 <!-- Subscription Management Platform Documentation -->
 <!-- volodymyr.leonov@theta.co.nz -->
 <!-- production -->
