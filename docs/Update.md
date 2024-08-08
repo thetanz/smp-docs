@@ -17,6 +17,6 @@ While the process only takes a few minutes, we recommend updating the app outsid
 
 **Note: You do not need to perform this update if version 1.4.10.0 or higher is installed.**
 
-The animation below shows you the steps described above. [Please email us if you require any further assistance](mailto:hello.d365@theta.co.nz?subject=Subscription%20Management%20Assistance%20Required)
+The animation below shows you the steps described above. [Please reach out to us if you require any further assistance.](mailto:hello.d365@theta.co.nz?subject=Subscription%20Management%20Assistance%20Required)
 
 ![](./images/UpdateSubscriptionManagement.gif)
