@@ -1,7 +1,7 @@
 ---
 sidebar_position: 998
 ---
-# Important Update Needed
+# Important Version Update
 
 `8 August 2024`
 
