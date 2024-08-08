@@ -1,5 +1,5 @@
 ---
-sidebar_position: 990
+sidebar_position: 998
 ---
 # Updating to the Latest Version
 
