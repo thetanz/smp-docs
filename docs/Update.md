@@ -13,4 +13,4 @@ While the process only takes a few minutes, we recommend updating the app outsid
 5.	Select "Install Update". You will notice that this will also trigger an update to the SubscriptionMgt extension. 
 6.	Select “Update to the latest”. Note: You will be asked to confirm that you have read and understand our [terms of use](https://thetacdn.blob.core.windows.net/assets/Legal%20docs/Theta%20Extensions%20Appsource%20Terms%20and%20Conditions) and [privacy policy](https://www.theta.co.nz/privacy-policy).
 
-
+![](./images/UpdateSubscriptionManagement.gif)
