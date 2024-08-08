@@ -1,7 +1,9 @@
 ---
 sidebar_position: 998
 ---
-# Updating to the Latest Version
+# Important Update Needed
+
+`8 August 2024`
 
 We have received reports from several customers who have experienced subscription issues with some of our apps. These customers had active subscriptions, but **were prevented from using the app**. We have identified the cause and released a fix. To avoid being impacted by this issue, it is important that you or your partner **update the "Subscription Management for Publishers" app in your Production environment**.
 
@@ -12,5 +14,9 @@ While the process only takes a few minutes, we recommend updating the app outsid
 4.	Scroll down to the "Subscription Management for Publishers" app.
 5.	Select "Install Update". You will notice that this will also trigger an update to the SubscriptionMgt extension. 
 6.	Select “Update to the latest”. Note: You will be asked to confirm that you have read and understand our [terms of use](https://thetacdn.blob.core.windows.net/assets/Legal%20docs/Theta%20Extensions%20Appsource%20Terms%20and%20Conditions) and [privacy policy](https://www.theta.co.nz/privacy-policy).
+
+**Note: You do not need to perform this update if version 1.4.10.0 or higher is installed.**
+
+The animation below shows you the steps described above.
 
 ![](./images/UpdateSubscriptionManagement.gif)
