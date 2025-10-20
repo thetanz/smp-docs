@@ -18,6 +18,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Notification for pastDue status [#21](https://github.com/thetanz/smp-docs/issues/21)
 - System refresh trial with second product subscription created [#23](https://github.com/thetanz/smp-docs/issues/23)
 - Clear Accountdata when Parent App is uninstalled
+
+## 26.0.0.0 - `2025-10-20`
+
+### Removed 
+- Removed obsoleted methods in the common library extension.
+
+## 25.1.4.0 - `2025-09-07`
+### Changed
+- The dependency for Open Feature has been removed.
+- Handled breaking changes relating to Business Central 2025 Wave 2 (BC27)
+
+## 25.0.0.0 - `2025-01-21`
+
+### Fixed 
+- When updating your subscription the following error would be raised on versions greater than 25.1: "Unsupported Media Type Status Code: 415"
+
+## 1.4.10.0 - `2024-08-01`
+### Changed
+- Added support for archived prices on existing subscriptions
+
+## 1.4.9.0 - `2024-07-11`
+### Fixed
+- Resolved an issue with the Azure Key Vault Initialisation - the issue was caused by 1.4.8.0.
+## 1.4.8.0 - `2024-07-11`
+### Changed
+- Implemented session cache to reduce the number of API calls
+- Allow using apps in a SaaS Sandbox without signing up for an account. Note: Some apps require minor refactoring to take advantage of this.
+
 ## 1.3.11.0 - `2023-05-02`
 ### Fixed
 - Code Warnings
