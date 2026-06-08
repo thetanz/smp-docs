@@ -19,6 +19,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - System refresh trial with second product subscription created [#23](https://github.com/thetanz/smp-docs/issues/23)
 - Clear Accountdata when Parent App is uninstalled
 
+## 27.1.3.0 `2026-06-08`
+### Changed
+- **Media Preview is now disabled by default.** Previously, clicking a file in the Document Attachments FactBox would always attempt to open the in-browser previewer. This behaviour is now opt-in and can be enabled via the new **File Preview Settings** action, which appears on both the Document Attachment Details page and the Document Attachments FactBox. The setting can be managed globally (Super User required) or on a per-user basis, with per-user preferences always taking priority over the global setting.
+- **File extension now takes priority over Tenant Media MIME type when selecting the viewer.** Previously, the MIME type stored against the Tenant Media record was used first to determine how to render a file. Where attachments were added programmatically, it was possible for that value to be set incorrectly or left as a generic type, causing files such as PDFs to be rendered incorrectly. The app now trusts the file extension to determine the appropriate viewer and only falls back to the Tenant Media MIME type when no extension is present.
+
+## 27.1.2.0 `2026-05-25`
+### Fixed
+- Fixed customers with more than 10 subscriptions losing rows after sign-out/sign-in. SyncCustomerData was reading from the embedded `customer.subscriptions` list, which Stripe caps at 10 items. It now uses the paginated subscriptions endpoint, which returns all subscriptions regardless of count.
+
+## 27.1.1.0 `2026-05-20`
+### Changed
+- Enforced minimum version of subscription management
+
+## 27.1.0.0 `2026-05-19`
+### Fixed
+
+- Fixed Stripe subscription paging: increased limit to 100 and corrected last-item index for paginated responses
+- Fixed SyncCustomerData incorrectly marking all Account Product records for deletion (now only marks non-app-registered rows)
+- Fixed duplicate subscriptions not being resolved during sign-in, causing stale or conflicting subscription state
+- Fixed subscription selection logic to prioritise active status over creation date
+### Added
+
+- Added FindAndUpdateExistingSubscriptionIDByProduct to detect and reuse existing Stripe subscriptions during assisted setup
+- Added duplicate subscription resolution during sign-in (cancels trialling when non-trialling exists; never cancels active)
+### Changed
+
+- VIEW_SM_TSL now extends "System App - Basic" instead of "COMMON_CO_TSL"
+- LoginCustomer now fetches Stripe subscriptions once per sign-in instead of once per product (performance improvement)
+
+
 ## 26.0.0.0 - `2025-10-20`
 
 ### Removed 
