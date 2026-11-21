@@ -6,6 +6,7 @@
         "id": "6717135a-d80c-4a63-8a3a-5ded6717135a",
         "name": "Subscription Management for Publishers",
         "brief": "Handling Monetization for Apps",
-        "marketplace": "MSAppSource"
+        "marketplace": "MSAppSource",
+        "appSourceUrl": "https://marketplace.microsoft.com/en-us/product/PUBID.thetasystemslimited%7CAID.subscription_management%7CPAPPID.6717135a-d80c-4a63-8a3a-5ded6717135a"
     }
 }
